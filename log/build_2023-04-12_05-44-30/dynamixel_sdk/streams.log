@@ -1,0 +1,40 @@
+[0.571s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk -- -j4 -l4
+[1.088s] [100%] Built target dynamixel_sdk
+[1.128s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk' returned '0': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk -- -j4 -l4
+[1.707s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk
+[1.924s] -- Install configuration: ""
+[1.938s] -- Execute custom install script
+[1.941s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[1.942s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[1.943s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[1.945s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[1.946s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[1.946s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[1.947s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[2.009s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[2.028s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[2.084s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[2.103s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[2.168s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[2.185s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[2.318s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[2.331s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[2.398s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[2.463s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[2.474s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[2.491s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[2.524s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[2.542s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[2.562s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[2.585s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[2.603s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[2.627s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[2.640s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[2.643s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[2.658s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[2.676s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.697s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[2.706s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[2.726s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[2.745s] -- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[2.782s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk' returned '0': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk

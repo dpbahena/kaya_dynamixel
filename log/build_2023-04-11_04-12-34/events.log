@@ -1,0 +1,489 @@
+[0.000000] (-) TimerEvent: {}
+[0.000913] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.007225] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.012670] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/ros2access/kaya_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.012840] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.097282] (-) TimerEvent: {}
+[0.198148] (-) TimerEvent: {}
+[0.230714] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.300612] (-) TimerEvent: {}
+[0.390884] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.395533] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[0.398863] (dynamixel_sdk) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[0.403810] (-) TimerEvent: {}
+[0.428407] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.435416] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.438039] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[0.504136] (-) TimerEvent: {}
+[0.605123] (-) TimerEvent: {}
+[0.706027] (-) TimerEvent: {}
+[0.806866] (-) TimerEvent: {}
+[0.907769] (-) TimerEvent: {}
+[0.956686] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[0.972041] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  2%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[1.007175] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[1.008096] (-) TimerEvent: {}
+[1.010018] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[1.072919] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[1.081273] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 33%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.094396] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 43%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.108317] (-) TimerEvent: {}
+[1.119143] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 53%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.141597] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 64%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[1.172793] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.208514] (-) TimerEvent: {}
+[1.212299] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces\n'}
+[1.258537] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[1.308713] (-) TimerEvent: {}
+[1.326407] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 84%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[1.387172] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 89%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.399635] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 94%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.408950] (-) TimerEvent: {}
+[1.415771] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.418064] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[1.509254] (-) TimerEvent: {}
+[1.610388] (-) TimerEvent: {}
+[1.620900] (dynamixel_sdk) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[1.635497] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[1.710689] (-) TimerEvent: {}
+[1.799583] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.804277] (dynamixel_sdk) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.808001] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[1.809181] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[1.810283] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[1.811070] (-) TimerEvent: {}
+[1.812117] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[1.813652] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[1.814439] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[1.815128] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[1.815982] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[1.817113] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[1.818118] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[1.822121] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[1.823125] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[1.823731] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[1.826527] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[1.828009] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[1.829461] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[1.832285] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[1.834217] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[1.836130] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[1.837862] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[1.840273] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[1.842247] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[1.843707] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[1.845672] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[1.847085] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[1.848598] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[1.849944] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[1.862089] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[1.863742] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.865187] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.866510] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[1.867527] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[1.869399] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[1.898440] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[1.912475] (-) TimerEvent: {}
+[2.019097] (-) TimerEvent: {}
+[2.126089] (-) TimerEvent: {}
+[2.219995] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[2.226372] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[2.229632] (-) TimerEvent: {}
+[2.333893] (-) TimerEvent: {}
+[2.406034] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.408995] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.412129] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[2.417143] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[2.418457] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[2.419478] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[2.420868] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.422379] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[2.424471] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[2.425935] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[2.427242] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[2.428805] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[2.430748] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[2.431963] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[2.434081] (-) TimerEvent: {}
+[2.438178] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.439416] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.441072] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.441918] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.445419] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.446347] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.447481] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.449833] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.452747] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[2.454075] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.455505] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[2.458596] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[2.460184] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[2.461245] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[2.463623] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[2.465045] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[2.466348] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[2.468157] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[2.470647] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[2.471858] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.472867] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.474841] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[2.476210] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[2.478419] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[2.481253] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[2.482394] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[2.485204] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[2.486432] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[2.490354] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.493585] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.495874] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.498289] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[2.500263] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[2.502543] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[2.504158] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[2.505870] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[2.507298] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[2.508874] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[2.510705] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[2.512722] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[2.514628] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[2.515928] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.517613] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[2.518781] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[2.520571] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[2.522190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[2.523851] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[2.525554] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[2.526414] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[2.534267] (-) TimerEvent: {}
+[2.537579] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[2.539571] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.541336] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.542833] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.544300] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.545960] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.547754] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.549451] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.550918] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[2.552945] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[2.554172] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[2.556924] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[2.558702] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.560952] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[2.563440] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.565563] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.639533] (-) TimerEvent: {}
+[2.761453] (-) TimerEvent: {}
+[2.789693] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.801287] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.805372] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.807420] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.814517] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.840173] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.856306] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.858587] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.859234] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.860510] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.862656] (-) TimerEvent: {}
+[2.863218] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.872388] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[2.882566] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[2.968055] (-) TimerEvent: {}
+[3.079034] (-) TimerEvent: {}
+[3.185034] (-) TimerEvent: {}
+[3.286770] (-) TimerEvent: {}
+[3.387510] (-) TimerEvent: {}
+[3.488372] (-) TimerEvent: {}
+[3.589937] (-) TimerEvent: {}
+[3.695750] (-) TimerEvent: {}
+[3.801643] (-) TimerEvent: {}
+[3.923004] (-) TimerEvent: {}
+[3.938124] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[3.995819] (dynamixel_sdk_examples) JobStarted: {'identifier': 'dynamixel_sdk_examples'}
+[4.028276] (-) TimerEvent: {}
+[4.127586] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'cmake'}
+[4.128404] (-) TimerEvent: {}
+[4.133433] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'build'}
+[4.134573] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[4.228718] (-) TimerEvent: {}
+[4.329571] (-) TimerEvent: {}
+[4.430461] (-) TimerEvent: {}
+[4.450258] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o\x1b[0m\n'}
+[4.530757] (-) TimerEvent: {}
+[4.631738] (-) TimerEvent: {}
+[4.733240] (-) TimerEvent: {}
+[4.834365] (-) TimerEvent: {}
+[4.935510] (-) TimerEvent: {}
+[5.036792] (-) TimerEvent: {}
+[5.137562] (-) TimerEvent: {}
+[5.238419] (-) TimerEvent: {}
+[5.339886] (-) TimerEvent: {}
+[5.440702] (-) TimerEvent: {}
+[5.541502] (-) TimerEvent: {}
+[5.642405] (-) TimerEvent: {}
+[5.743209] (-) TimerEvent: {}
+[5.844008] (-) TimerEvent: {}
+[5.945743] (-) TimerEvent: {}
+[6.055935] (-) TimerEvent: {}
+[6.157360] (-) TimerEvent: {}
+[6.258478] (-) TimerEvent: {}
+[6.359300] (-) TimerEvent: {}
+[6.460172] (-) TimerEvent: {}
+[6.560980] (-) TimerEvent: {}
+[6.661836] (-) TimerEvent: {}
+[6.762711] (-) TimerEvent: {}
+[6.863504] (-) TimerEvent: {}
+[6.964319] (-) TimerEvent: {}
+[7.065140] (-) TimerEvent: {}
+[7.165894] (-) TimerEvent: {}
+[7.266707] (-) TimerEvent: {}
+[7.367525] (-) TimerEvent: {}
+[7.469423] (-) TimerEvent: {}
+[7.570234] (-) TimerEvent: {}
+[7.671121] (-) TimerEvent: {}
+[7.771975] (-) TimerEvent: {}
+[7.872812] (-) TimerEvent: {}
+[7.973582] (-) TimerEvent: {}
+[8.074348] (-) TimerEvent: {}
+[8.175113] (-) TimerEvent: {}
+[8.275912] (-) TimerEvent: {}
+[8.377059] (-) TimerEvent: {}
+[8.477916] (-) TimerEvent: {}
+[8.578890] (-) TimerEvent: {}
+[8.679715] (-) TimerEvent: {}
+[8.780504] (-) TimerEvent: {}
+[8.881329] (-) TimerEvent: {}
+[8.982143] (-) TimerEvent: {}
+[9.082925] (-) TimerEvent: {}
+[9.183683] (-) TimerEvent: {}
+[9.284744] (-) TimerEvent: {}
+[9.385531] (-) TimerEvent: {}
+[9.486375] (-) TimerEvent: {}
+[9.587234] (-) TimerEvent: {}
+[9.688025] (-) TimerEvent: {}
+[9.788856] (-) TimerEvent: {}
+[9.889652] (-) TimerEvent: {}
+[9.990416] (-) TimerEvent: {}
+[10.091232] (-) TimerEvent: {}
+[10.192205] (-) TimerEvent: {}
+[10.293163] (-) TimerEvent: {}
+[10.393994] (-) TimerEvent: {}
+[10.494900] (-) TimerEvent: {}
+[10.595732] (-) TimerEvent: {}
+[10.696533] (-) TimerEvent: {}
+[10.797381] (-) TimerEvent: {}
+[10.898204] (-) TimerEvent: {}
+[10.998969] (-) TimerEvent: {}
+[11.099815] (-) TimerEvent: {}
+[11.200733] (-) TimerEvent: {}
+[11.301474] (-) TimerEvent: {}
+[11.402229] (-) TimerEvent: {}
+[11.503026] (-) TimerEvent: {}
+[11.603916] (-) TimerEvent: {}
+[11.704815] (-) TimerEvent: {}
+[11.805578] (-) TimerEvent: {}
+[11.906333] (-) TimerEvent: {}
+[12.007105] (-) TimerEvent: {}
+[12.107940] (-) TimerEvent: {}
+[12.208769] (-) TimerEvent: {}
+[12.309524] (-) TimerEvent: {}
+[12.410685] (-) TimerEvent: {}
+[12.511448] (-) TimerEvent: {}
+[12.612301] (-) TimerEvent: {}
+[12.713204] (-) TimerEvent: {}
+[12.814045] (-) TimerEvent: {}
+[12.914857] (-) TimerEvent: {}
+[13.015627] (-) TimerEvent: {}
+[13.116460] (-) TimerEvent: {}
+[13.217376] (-) TimerEvent: {}
+[13.318181] (-) TimerEvent: {}
+[13.418943] (-) TimerEvent: {}
+[13.519764] (-) TimerEvent: {}
+[13.620652] (-) TimerEvent: {}
+[13.721500] (-) TimerEvent: {}
+[13.822276] (-) TimerEvent: {}
+[13.923091] (-) TimerEvent: {}
+[14.023919] (-) TimerEvent: {}
+[14.124804] (-) TimerEvent: {}
+[14.225577] (-) TimerEvent: {}
+[14.326349] (-) TimerEvent: {}
+[14.427174] (-) TimerEvent: {}
+[14.527996] (-) TimerEvent: {}
+[14.628889] (-) TimerEvent: {}
+[14.729641] (-) TimerEvent: {}
+[14.830449] (-) TimerEvent: {}
+[14.931228] (-) TimerEvent: {}
+[15.031977] (-) TimerEvent: {}
+[15.133051] (-) TimerEvent: {}
+[15.236145] (-) TimerEvent: {}
+[15.337073] (-) TimerEvent: {}
+[15.437888] (-) TimerEvent: {}
+[15.549453] (-) TimerEvent: {}
+[15.651706] (-) TimerEvent: {}
+[15.752699] (-) TimerEvent: {}
+[15.853569] (-) TimerEvent: {}
+[15.954433] (-) TimerEvent: {}
+[16.055981] (-) TimerEvent: {}
+[16.156888] (-) TimerEvent: {}
+[16.257686] (-) TimerEvent: {}
+[16.358506] (-) TimerEvent: {}
+[16.459372] (-) TimerEvent: {}
+[16.560239] (-) TimerEvent: {}
+[16.661013] (-) TimerEvent: {}
+[16.761828] (-) TimerEvent: {}
+[16.862647] (-) TimerEvent: {}
+[16.963456] (-) TimerEvent: {}
+[17.064254] (-) TimerEvent: {}
+[17.165060] (-) TimerEvent: {}
+[17.265896] (-) TimerEvent: {}
+[17.366643] (-) TimerEvent: {}
+[17.467398] (-) TimerEvent: {}
+[17.568217] (-) TimerEvent: {}
+[17.669088] (-) TimerEvent: {}
+[17.769920] (-) TimerEvent: {}
+[17.870737] (-) TimerEvent: {}
+[17.971571] (-) TimerEvent: {}
+[18.072365] (-) TimerEvent: {}
+[18.173220] (-) TimerEvent: {}
+[18.274119] (-) TimerEvent: {}
+[18.374873] (-) TimerEvent: {}
+[18.475695] (-) TimerEvent: {}
+[18.576436] (-) TimerEvent: {}
+[18.677221] (-) TimerEvent: {}
+[18.778081] (-) TimerEvent: {}
+[18.879908] (-) TimerEvent: {}
+[18.981229] (-) TimerEvent: {}
+[19.081983] (-) TimerEvent: {}
+[19.182817] (-) TimerEvent: {}
+[19.283588] (-) TimerEvent: {}
+[19.384428] (-) TimerEvent: {}
+[19.485242] (-) TimerEvent: {}
+[19.588264] (-) TimerEvent: {}
+[19.690316] (-) TimerEvent: {}
+[19.791122] (-) TimerEvent: {}
+[19.891945] (-) TimerEvent: {}
+[19.992793] (-) TimerEvent: {}
+[20.093655] (-) TimerEvent: {}
+[20.194509] (-) TimerEvent: {}
+[20.295317] (-) TimerEvent: {}
+[20.396180] (-) TimerEvent: {}
+[20.497046] (-) TimerEvent: {}
+[20.597784] (-) TimerEvent: {}
+[20.698539] (-) TimerEvent: {}
+[20.799308] (-) TimerEvent: {}
+[20.900129] (-) TimerEvent: {}
+[21.000896] (-) TimerEvent: {}
+[21.101703] (-) TimerEvent: {}
+[21.205134] (-) TimerEvent: {}
+[21.306032] (-) TimerEvent: {}
+[21.406788] (-) TimerEvent: {}
+[21.507600] (-) TimerEvent: {}
+[21.608426] (-) TimerEvent: {}
+[21.709250] (-) TimerEvent: {}
+[21.810160] (-) TimerEvent: {}
+[21.910949] (-) TimerEvent: {}
+[22.011758] (-) TimerEvent: {}
+[22.112641] (-) TimerEvent: {}
+[22.213528] (-) TimerEvent: {}
+[22.314372] (-) TimerEvent: {}
+[22.415176] (-) TimerEvent: {}
+[22.515937] (-) TimerEvent: {}
+[22.616694] (-) TimerEvent: {}
+[22.717503] (-) TimerEvent: {}
+[22.818769] (-) TimerEvent: {}
+[22.919658] (-) TimerEvent: {}
+[23.020534] (-) TimerEvent: {}
+[23.121463] (-) TimerEvent: {}
+[23.222234] (-) TimerEvent: {}
+[23.322996] (-) TimerEvent: {}
+[23.423804] (-) TimerEvent: {}
+[23.524643] (-) TimerEvent: {}
+[23.625433] (-) TimerEvent: {}
+[23.726178] (-) TimerEvent: {}
+[23.827031] (-) TimerEvent: {}
+[23.927884] (-) TimerEvent: {}
+[24.028731] (-) TimerEvent: {}
+[24.129465] (-) TimerEvent: {}
+[24.230247] (-) TimerEvent: {}
+[24.330971] (-) TimerEvent: {}
+[24.431741] (-) TimerEvent: {}
+[24.532508] (-) TimerEvent: {}
+[24.633303] (-) TimerEvent: {}
+[24.734182] (-) TimerEvent: {}
+[24.835043] (-) TimerEvent: {}
+[24.936015] (-) TimerEvent: {}
+[25.037018] (-) TimerEvent: {}
+[25.138366] (-) TimerEvent: {}
+[25.240008] (-) TimerEvent: {}
+[25.341136] (-) TimerEvent: {}
+[25.442005] (-) TimerEvent: {}
+[25.542801] (-) TimerEvent: {}
+[25.643592] (-) TimerEvent: {}
+[25.744407] (-) TimerEvent: {}
+[25.845278] (-) TimerEvent: {}
+[25.946085] (-) TimerEvent: {}
+[26.046889] (-) TimerEvent: {}
+[26.147622] (-) TimerEvent: {}
+[26.248353] (-) TimerEvent: {}
+[26.349276] (-) TimerEvent: {}
+[26.450017] (-) TimerEvent: {}
+[26.550858] (-) TimerEvent: {}
+[26.653780] (-) TimerEvent: {}
+[26.754642] (-) TimerEvent: {}
+[26.855422] (-) TimerEvent: {}
+[26.956228] (-) TimerEvent: {}
+[27.057057] (-) TimerEvent: {}
+[27.157920] (-) TimerEvent: {}
+[27.258759] (-) TimerEvent: {}
+[27.343546] (dynamixel_sdk_examples) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable read_write_node\x1b[0m\n'}
+[27.358999] (-) TimerEvent: {}
+[27.459794] (-) TimerEvent: {}
+[27.560745] (-) TimerEvent: {}
+[27.661510] (-) TimerEvent: {}
+[27.762413] (-) TimerEvent: {}
+[27.863298] (-) TimerEvent: {}
+[27.964148] (-) TimerEvent: {}
+[28.065058] (-) TimerEvent: {}
+[28.165877] (-) TimerEvent: {}
+[28.266644] (-) TimerEvent: {}
+[28.368261] (-) TimerEvent: {}
+[28.469183] (-) TimerEvent: {}
+[28.571425] (-) TimerEvent: {}
+[28.587001] (dynamixel_sdk_examples) StdoutLine: {'line': b'[100%] Built target read_write_node\n'}
+[28.646010] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[28.671678] (-) TimerEvent: {}
+[28.773512] (-) TimerEvent: {}
+[28.874225] (-) TimerEvent: {}
+[28.975011] (-) TimerEvent: {}
+[28.984435] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'install'}
+[28.986858] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[29.075272] (-) TimerEvent: {}
+[29.164854] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.175498] (-) TimerEvent: {}
+[29.193072] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[29.216936] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node\n'}
+[29.236397] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples\n'}
+[29.246604] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples\n'}
+[29.252007] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh\n'}
+[29.260258] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.dsv\n'}
+[29.265716] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.sh\n'}
+[29.273682] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.dsv\n'}
+[29.275677] (-) TimerEvent: {}
+[29.278286] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.bash\n'}
+[29.284304] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.sh\n'}
+[29.340492] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.zsh\n'}
+[29.351611] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.dsv\n'}
+[29.353538] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv\n'}
+[29.371763] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/packages/dynamixel_sdk_examples\n'}
+[29.375808] (-) TimerEvent: {}
+[29.377190] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig.cmake\n'}
+[29.379060] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig-version.cmake\n'}
+[29.393225] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.xml\n'}
+[29.423673] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[29.481131] (-) TimerEvent: {}
+[29.588686] (-) TimerEvent: {}
+[29.689837] (-) TimerEvent: {}
+[29.790800] (-) TimerEvent: {}
+[29.898542] (-) TimerEvent: {}
+[29.999547] (-) TimerEvent: {}
+[30.063289] (dynamixel_sdk_examples) JobEnded: {'identifier': 'dynamixel_sdk_examples', 'rc': 0}
+[30.070137] (-) EventReactorShutdown: {}

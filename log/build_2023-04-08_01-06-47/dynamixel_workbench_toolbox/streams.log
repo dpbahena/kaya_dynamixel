@@ -1,0 +1,36 @@
+[0.159s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_workbench_toolbox': /usr/local/bin/cmake /home/ros2access/kaya_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2access/kaya_ws/install/dynamixel_workbench_toolbox
+[0.495s] -- The C compiler identification is GNU 7.5.0
+[0.699s] -- The CXX compiler identification is GNU 7.5.0
+[0.736s] -- Detecting C compiler ABI info
+[0.934s] -- Detecting C compiler ABI info - done
+[0.983s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.983s] -- Detecting C compile features
+[0.985s] -- Detecting C compile features - done
+[1.000s] -- Detecting CXX compiler ABI info
+[1.230s] -- Detecting CXX compiler ABI info - done
+[1.281s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.282s] -- Detecting CXX compile features
+[1.284s] -- Detecting CXX compile features - done
+[1.299s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/install/share/ament_cmake/cmake)
+[1.434s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[1.435s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.627s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.808s] [31mCMake Error at CMakeLists.txt:25 (find_package):
+[2.808s]   By not providing "Finddynamixel_sdk.cmake" in CMAKE_MODULE_PATH this
+[2.809s]   project has asked CMake to find a package configuration file provided by
+[2.809s]   "dynamixel_sdk", but CMake did not find one.
+[2.810s] 
+[2.810s]   Could not find a package configuration file provided by "dynamixel_sdk"
+[2.811s]   with any of the following names:
+[2.812s] 
+[2.812s]     dynamixel_sdkConfig.cmake
+[2.813s]     dynamixel_sdk-config.cmake
+[2.813s] 
+[2.814s]   Add the installation prefix of "dynamixel_sdk" to CMAKE_PREFIX_PATH or set
+[2.814s]   "dynamixel_sdk_DIR" to a directory containing one of the above files.  If
+[2.815s]   "dynamixel_sdk" provides a separate development package or SDK, be sure it
+[2.815s]   has been installed.
+[2.816s] 
+[2.816s] [0m
+[2.817s] -- Configuring incomplete, errors occurred!
+[2.846s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_workbench_toolbox' returned '1': /usr/local/bin/cmake /home/ros2access/kaya_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2access/kaya_ws/install/dynamixel_workbench_toolbox

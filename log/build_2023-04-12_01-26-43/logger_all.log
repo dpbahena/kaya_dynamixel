@@ -1,0 +1,304 @@
+[3.519s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.520s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f79459518>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f79459518>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f79384208>)
+[3.840s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.841s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.841s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.841s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.842s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.843s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.844s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ros2access/kaya_ws'
+[3.844s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.845s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.845s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.845s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.846s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.846s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.846s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.846s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.847s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.063s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.064s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.064s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.064s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.064s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.065s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.066s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.066s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.069s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.069s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.070s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.070s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.071s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.071s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.071s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[4.072s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[4.072s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[4.072s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[4.073s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[4.073s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[4.073s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[4.073s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[4.074s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[4.074s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[4.074s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[4.074s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[4.075s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[4.075s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[4.075s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['ignore', 'ignore_ament_install']
+[4.076s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'ignore'
+[4.076s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'ignore_ament_install'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['colcon_pkg']
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'colcon_pkg'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['colcon_meta']
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'colcon_meta'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['ros']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'ros'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['cmake', 'python']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'cmake'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'python'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extensions ['python_setup_py']
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK) by extension 'python_setup_py'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extensions ['ignore', 'ignore_ament_install']
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extension 'ignore'
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extension 'ignore_ament_install'
+[4.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extensions ['colcon_pkg']
+[4.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extension 'colcon_pkg'
+[4.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extensions ['colcon_meta']
+[4.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extension 'colcon_meta'
+[4.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extensions ['ros']
+[4.082s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk) by extension 'ros'
+[4.101s] DEBUG:colcon.colcon_core.package_identification:Package 'src/DynamixelSDK/dynamixel_sdk' with type 'ros.ament_cmake' and name 'dynamixel_sdk'
+[4.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[4.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extension 'ignore'
+[4.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extension 'ignore_ament_install'
+[4.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extensions ['colcon_pkg']
+[4.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extension 'colcon_pkg'
+[4.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extensions ['colcon_meta']
+[4.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extension 'colcon_meta'
+[4.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extensions ['ros']
+[4.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_custom_interfaces) by extension 'ros'
+[4.109s] DEBUG:colcon.colcon_core.package_identification:Package 'src/DynamixelSDK/dynamixel_sdk_custom_interfaces' with type 'ros.ament_cmake' and name 'dynamixel_sdk_custom_interfaces'
+[4.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extensions ['ignore', 'ignore_ament_install']
+[4.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extension 'ignore'
+[4.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extension 'ignore_ament_install'
+[4.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extensions ['colcon_pkg']
+[4.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extension 'colcon_pkg'
+[4.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extensions ['colcon_meta']
+[4.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extension 'colcon_meta'
+[4.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extensions ['ros']
+[4.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/DynamixelSDK/dynamixel_sdk_examples) by extension 'ros'
+[4.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/DynamixelSDK/dynamixel_sdk_examples' with type 'ros.ament_cmake' and name 'dynamixel_sdk_examples'
+[4.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.378s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_args' from command line to 'None'
+[4.378s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_target' from command line to 'None'
+[4.378s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.378s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[4.378s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[4.379s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[4.379s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[4.379s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[4.379s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.379s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2access/kaya_ws/build/dynamixel_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2access/kaya_ws/install/dynamixel_sdk', 'merge_install': False, 'path': '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk', 'symlink_install': False, 'test_result_base': None}
+[4.398s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[4.399s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[4.399s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.399s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[4.400s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[4.400s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[4.400s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[4.400s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[4.401s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.401s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk_custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces', 'merge_install': False, 'path': '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces', 'symlink_install': False, 'test_result_base': None}
+[4.422s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_args' from command line to 'None'
+[4.422s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_target' from command line to 'None'
+[4.422s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.422s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_clean_cache' from command line to 'False'
+[4.423s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_clean_first' from command line to 'False'
+[4.423s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_force_configure' from command line to 'False'
+[4.423s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'ament_cmake_args' from command line to 'None'
+[4.423s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'catkin_cmake_args' from command line to 'None'
+[4.423s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.423s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk_examples' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples', 'merge_install': False, 'path': '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples', 'symlink_install': False, 'test_result_base': None}
+[4.440s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.537s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.539s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk' with build type 'ament_cmake'
+[4.540s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk'
+[5.124s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[5.127s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.127s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.718s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces' with build type 'ament_cmake'
+[5.719s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces'
+[5.766s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.767s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk -- -j4 -l4
+[6.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[6.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk' returned '0': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk -- -j4 -l4
+[7.445s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk
+[7.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces' returned '0': /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[7.706s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk)
+[7.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk' returned '0': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk
+[7.803s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk' for CMake module files
+[7.807s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk' for CMake config files
+[7.810s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'cmake_prefix_path')
+[7.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.ps1'
+[7.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.dsv'
+[7.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.sh'
+[7.869s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib'
+[7.870s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'ld_library_path_lib')
+[7.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.ps1'
+[7.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.dsv'
+[7.921s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.sh'
+[7.923s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/bin'
+[7.923s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib/pkgconfig/dynamixel_sdk.pc'
+[7.925s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib/python3.6/site-packages'
+[7.926s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/bin'
+[7.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.ps1'
+[7.976s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv'
+[7.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.sh'
+[7.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.bash'
+[7.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.zsh'
+[7.994s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk/share/colcon-core/packages/dynamixel_sdk)
+[8.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces
+[8.411s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk)
+[8.477s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk' for CMake module files
+[8.480s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk' for CMake config files
+[8.482s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'cmake_prefix_path')
+[8.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.ps1'
+[8.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.dsv'
+[8.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.sh'
+[8.538s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib'
+[8.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'ld_library_path_lib')
+[8.589s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.ps1'
+[8.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.dsv'
+[8.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.sh'
+[8.600s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/bin'
+[8.601s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib/pkgconfig/dynamixel_sdk.pc'
+[8.602s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/lib/python3.6/site-packages'
+[8.603s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk/bin'
+[8.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.ps1'
+[8.649s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv'
+[8.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.sh'
+[8.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.bash'
+[8.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.zsh'
+[8.661s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk/share/colcon-core/packages/dynamixel_sdk)
+[8.667s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_custom_interfaces)
+[8.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces' returned '0': /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces
+[8.731s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces' for CMake module files
+[8.737s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces' for CMake config files
+[8.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'cmake_prefix_path')
+[8.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.ps1'
+[8.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.dsv'
+[8.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.sh'
+[8.795s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib'
+[8.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'ld_library_path_lib')
+[8.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.ps1'
+[8.838s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.dsv'
+[8.839s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.sh'
+[8.841s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/bin'
+[8.841s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/pkgconfig/dynamixel_sdk_custom_interfaces.pc'
+[8.842s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages'
+[8.843s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'pythonpath')
+[8.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.ps1'
+[8.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.dsv'
+[8.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.sh'
+[8.890s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/bin'
+[8.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.ps1'
+[8.933s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv'
+[8.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.sh'
+[8.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.bash'
+[8.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.zsh'
+[8.942s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/colcon-core/packages/dynamixel_sdk_custom_interfaces)
+[9.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_custom_interfaces)
+[9.514s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces' for CMake module files
+[9.519s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces' for CMake config files
+[9.525s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'cmake_prefix_path')
+[9.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.ps1'
+[9.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.dsv'
+[9.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.sh'
+[9.579s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib'
+[9.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'ld_library_path_lib')
+[9.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.ps1'
+[9.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.dsv'
+[9.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.sh'
+[9.630s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/bin'
+[9.630s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/pkgconfig/dynamixel_sdk_custom_interfaces.pc'
+[9.631s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages'
+[9.632s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'pythonpath')
+[9.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.ps1'
+[9.679s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.dsv'
+[9.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.sh'
+[9.684s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/bin'
+[9.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.ps1'
+[9.730s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv'
+[9.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.sh'
+[9.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.bash'
+[9.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.zsh'
+[9.741s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/colcon-core/packages/dynamixel_sdk_custom_interfaces)
+[9.742s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples' with build type 'ament_cmake'
+[9.743s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples'
+[9.790s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.791s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[33.884s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples' returned '0': CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[34.172s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
+[34.399s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_examples)
+[34.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples' returned '0': CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
+[34.462s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples' for CMake module files
+[34.467s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples' for CMake config files
+[34.469s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_examples', 'cmake_prefix_path')
+[34.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.ps1'
+[34.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.dsv'
+[34.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.sh'
+[34.520s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib'
+[34.521s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/bin'
+[34.521s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/pkgconfig/dynamixel_sdk_examples.pc'
+[34.522s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/python3.6/site-packages'
+[34.523s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/bin'
+[34.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.ps1'
+[34.567s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv'
+[34.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.sh'
+[34.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.bash'
+[34.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.zsh'
+[34.576s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/colcon-core/packages/dynamixel_sdk_examples)
+[34.880s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_examples)
+[34.939s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples' for CMake module files
+[34.942s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples' for CMake config files
+[34.944s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_examples', 'cmake_prefix_path')
+[34.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.ps1'
+[34.991s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.dsv'
+[34.993s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.sh'
+[34.997s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib'
+[34.998s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/bin'
+[34.998s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/pkgconfig/dynamixel_sdk_examples.pc'
+[34.999s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/python3.6/site-packages'
+[35.000s] Level 1:colcon.colcon_core.environment:checking '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/bin'
+[35.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.ps1'
+[35.044s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv'
+[35.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.sh'
+[35.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.bash'
+[35.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.zsh'
+[35.054s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/colcon-core/packages/dynamixel_sdk_examples)
+[35.056s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[35.060s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[35.060s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[35.061s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[35.123s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[35.124s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[35.132s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[35.132s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[35.134s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.InvalidFileContent: D-Bus library appears to be incorrectly set up: see the manual page for dbus-uuidgen to correct this issue. (Failed to open "/var/lib/dbus/machine-id": No such file or directory; UUID file '/etc/machine-id' should contain a hex string of length 32, not length 0, with no other text)
+[35.134s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[35.175s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2access/kaya_ws/install/local_setup.ps1'
+[35.182s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros2access/kaya_ws/install/_local_setup_util_ps1.py'
+[35.194s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2access/kaya_ws/install/setup.ps1'
+[35.212s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2access/kaya_ws/install/local_setup.sh'
+[35.217s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros2access/kaya_ws/install/_local_setup_util_sh.py'
+[35.219s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2access/kaya_ws/install/setup.sh'
+[35.237s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2access/kaya_ws/install/local_setup.bash'
+[35.242s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2access/kaya_ws/install/setup.bash'
+[35.259s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2access/kaya_ws/install/local_setup.zsh'
+[35.263s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2access/kaya_ws/install/setup.zsh'

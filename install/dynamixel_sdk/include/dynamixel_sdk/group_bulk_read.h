@@ -1,0 +1,1 @@
+/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h

@@ -1,0 +1,1672 @@
+[0.000000] (-) TimerEvent: {}
+[0.004571] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.004949] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.006659] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/ros2access/kaya_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.007092] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.092995] (-) TimerEvent: {}
+[0.193931] (-) TimerEvent: {}
+[0.260956] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.299207] (-) TimerEvent: {}
+[0.409251] (-) TimerEvent: {}
+[0.426011] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.433726] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[0.438311] (dynamixel_sdk) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[0.501094] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.508358] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.509993] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[0.518777] (-) TimerEvent: {}
+[0.623206] (-) TimerEvent: {}
+[0.726299] (-) TimerEvent: {}
+[0.827327] (-) TimerEvent: {}
+[0.928358] (-) TimerEvent: {}
+[1.029461] (-) TimerEvent: {}
+[1.130891] (-) TimerEvent: {}
+[1.232091] (-) TimerEvent: {}
+[1.293847] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[1.322836] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  2%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[1.332331] (-) TimerEvent: {}
+[1.337514] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[1.390039] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[1.432559] (-) TimerEvent: {}
+[1.456918] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.516221] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 33%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.532830] (-) TimerEvent: {}
+[1.566474] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 43%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[1.633010] (-) TimerEvent: {}
+[1.635532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 53%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.694757] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 64%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[1.713794] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[1.733315] (-) TimerEvent: {}
+[1.754645] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.792808] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces\n'}
+[1.833456] (-) TimerEvent: {}
+[1.837802] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[1.910825] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 84%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[1.923961] (dynamixel_sdk) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[1.934893] (-) TimerEvent: {}
+[1.974671] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 89%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.022026] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 94%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.035052] (-) TimerEvent: {}
+[2.072720] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.111955] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.115100] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[2.117336] (dynamixel_sdk) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.123169] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[2.125816] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[2.131199] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[2.132076] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[2.132981] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[2.133764] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[2.134409] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[2.135035] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[2.135865] (-) TimerEvent: {}
+[2.136572] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[2.137631] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[2.138318] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[2.138955] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[2.139574] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[2.140578] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[2.142546] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[2.143476] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[2.144466] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[2.145423] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[2.146875] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[2.148378] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[2.150056] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[2.153603] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[2.154437] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[2.156187] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[2.162461] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[2.163799] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[2.164495] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[2.180361] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[2.181465] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.182365] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.183623] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[2.184582] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[2.185470] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[2.222523] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[2.237909] (-) TimerEvent: {}
+[2.338823] (-) TimerEvent: {}
+[2.439970] (-) TimerEvent: {}
+[2.546257] (-) TimerEvent: {}
+[2.652765] (-) TimerEvent: {}
+[2.677275] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[2.678956] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[2.753008] (-) TimerEvent: {}
+[2.853940] (-) TimerEvent: {}
+[2.861099] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.864336] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.868257] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[2.873342] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[2.879255] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[2.881030] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[2.881989] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.882709] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[2.883551] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[2.884339] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[2.885307] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[2.892348] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[2.893174] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[2.895759] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[2.899457] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.901234] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.902387] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.905331] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.910124] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.912914] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.914329] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.916902] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.919318] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[2.920591] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.922016] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[2.924948] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[2.930190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[2.931123] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[2.932006] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[2.933159] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[2.934419] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[2.935639] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[2.936613] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[2.939151] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.942119] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.945635] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[2.947359] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[2.949786] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[2.952576] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[2.954131] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[2.954794] (-) TimerEvent: {}
+[2.956626] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[2.958478] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[2.961766] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.965737] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.968574] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.971468] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[2.973685] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[2.977121] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[2.979871] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[2.980908] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[2.984782] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[2.985943] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[2.986838] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[2.990056] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[2.992051] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[2.995500] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.996791] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[2.998397] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[3.000125] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[3.001746] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[3.003399] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[3.005185] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[3.006012] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[3.019840] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[3.021906] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.023319] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.028396] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.029221] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.030641] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.031399] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.032332] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.033985] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[3.035183] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[3.045356] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[3.047331] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[3.049626] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.051961] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[3.054156] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.054813] (-) TimerEvent: {}
+[3.056909] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.160189] (-) TimerEvent: {}
+[3.280063] (-) TimerEvent: {}
+[3.382520] (-) TimerEvent: {}
+[3.392442] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[3.396740] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.398236] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.401244] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.402309] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.421923] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.422921] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.432544] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.482710] (-) TimerEvent: {}
+[3.512228] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.513674] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.514983] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.516040] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.555019] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[3.587973] (-) TimerEvent: {}
+[3.699074] (-) TimerEvent: {}
+[3.813907] (-) TimerEvent: {}
+[3.916229] (-) TimerEvent: {}
+[4.017216] (-) TimerEvent: {}
+[4.117909] (-) TimerEvent: {}
+[4.218635] (-) TimerEvent: {}
+[4.319455] (-) TimerEvent: {}
+[4.425710] (-) TimerEvent: {}
+[4.531745] (-) TimerEvent: {}
+[4.637660] (-) TimerEvent: {}
+[4.673603] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[4.731593] (dynamixel_sdk_examples) JobStarted: {'identifier': 'dynamixel_sdk_examples'}
+[4.742934] (-) TimerEvent: {}
+[4.853008] (-) TimerEvent: {}
+[4.862144] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'cmake'}
+[4.868140] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'build'}
+[4.870054] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', '--', '-j4', '-l4'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[4.953222] (-) TimerEvent: {}
+[5.054075] (-) TimerEvent: {}
+[5.154853] (-) TimerEvent: {}
+[5.222383] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o\x1b[0m\n'}
+[5.255045] (-) TimerEvent: {}
+[5.355858] (-) TimerEvent: {}
+[5.456711] (-) TimerEvent: {}
+[5.557690] (-) TimerEvent: {}
+[5.658920] (-) TimerEvent: {}
+[5.759882] (-) TimerEvent: {}
+[5.860884] (-) TimerEvent: {}
+[5.961993] (-) TimerEvent: {}
+[6.063061] (-) TimerEvent: {}
+[6.163815] (-) TimerEvent: {}
+[6.264767] (-) TimerEvent: {}
+[6.365669] (-) TimerEvent: {}
+[6.466631] (-) TimerEvent: {}
+[6.567392] (-) TimerEvent: {}
+[6.668274] (-) TimerEvent: {}
+[6.769083] (-) TimerEvent: {}
+[6.869925] (-) TimerEvent: {}
+[6.970744] (-) TimerEvent: {}
+[7.071573] (-) TimerEvent: {}
+[7.172582] (-) TimerEvent: {}
+[7.273453] (-) TimerEvent: {}
+[7.374333] (-) TimerEvent: {}
+[7.475177] (-) TimerEvent: {}
+[7.576124] (-) TimerEvent: {}
+[7.676959] (-) TimerEvent: {}
+[7.777796] (-) TimerEvent: {}
+[7.878809] (-) TimerEvent: {}
+[7.979582] (-) TimerEvent: {}
+[8.080431] (-) TimerEvent: {}
+[8.181275] (-) TimerEvent: {}
+[8.282220] (-) TimerEvent: {}
+[8.382985] (-) TimerEvent: {}
+[8.485032] (-) TimerEvent: {}
+[8.587155] (-) TimerEvent: {}
+[8.688652] (-) TimerEvent: {}
+[8.789466] (-) TimerEvent: {}
+[8.890333] (-) TimerEvent: {}
+[8.991888] (-) TimerEvent: {}
+[9.092664] (-) TimerEvent: {}
+[9.194128] (-) TimerEvent: {}
+[9.294948] (-) TimerEvent: {}
+[9.395760] (-) TimerEvent: {}
+[9.496580] (-) TimerEvent: {}
+[9.597417] (-) TimerEvent: {}
+[9.698427] (-) TimerEvent: {}
+[9.799314] (-) TimerEvent: {}
+[9.900155] (-) TimerEvent: {}
+[10.000936] (-) TimerEvent: {}
+[10.101828] (-) TimerEvent: {}
+[10.203425] (-) TimerEvent: {}
+[10.304449] (-) TimerEvent: {}
+[10.405276] (-) TimerEvent: {}
+[10.506036] (-) TimerEvent: {}
+[10.606794] (-) TimerEvent: {}
+[10.707641] (-) TimerEvent: {}
+[10.808592] (-) TimerEvent: {}
+[10.909402] (-) TimerEvent: {}
+[11.010281] (-) TimerEvent: {}
+[11.115799] (-) TimerEvent: {}
+[11.217399] (-) TimerEvent: {}
+[11.318213] (-) TimerEvent: {}
+[11.418981] (-) TimerEvent: {}
+[11.519791] (-) TimerEvent: {}
+[11.620556] (-) TimerEvent: {}
+[11.721357] (-) TimerEvent: {}
+[11.822242] (-) TimerEvent: {}
+[11.922950] (-) TimerEvent: {}
+[12.023821] (-) TimerEvent: {}
+[12.125021] (-) TimerEvent: {}
+[12.226135] (-) TimerEvent: {}
+[12.327478] (-) TimerEvent: {}
+[12.429029] (-) TimerEvent: {}
+[12.529828] (-) TimerEvent: {}
+[12.630581] (-) TimerEvent: {}
+[12.731392] (-) TimerEvent: {}
+[12.832412] (-) TimerEvent: {}
+[12.933289] (-) TimerEvent: {}
+[13.034061] (-) TimerEvent: {}
+[13.134943] (-) TimerEvent: {}
+[13.235801] (-) TimerEvent: {}
+[13.336801] (-) TimerEvent: {}
+[13.438271] (-) TimerEvent: {}
+[13.539054] (-) TimerEvent: {}
+[13.640005] (-) TimerEvent: {}
+[13.741141] (-) TimerEvent: {}
+[13.842186] (-) TimerEvent: {}
+[13.943565] (-) TimerEvent: {}
+[14.044921] (-) TimerEvent: {}
+[14.146972] (-) TimerEvent: {}
+[14.248154] (-) TimerEvent: {}
+[14.349731] (-) TimerEvent: {}
+[14.450644] (-) TimerEvent: {}
+[14.552059] (-) TimerEvent: {}
+[14.653165] (-) TimerEvent: {}
+[14.754258] (-) TimerEvent: {}
+[14.855273] (-) TimerEvent: {}
+[14.956249] (-) TimerEvent: {}
+[15.057322] (-) TimerEvent: {}
+[15.159199] (-) TimerEvent: {}
+[15.260742] (-) TimerEvent: {}
+[15.361787] (-) TimerEvent: {}
+[15.462750] (-) TimerEvent: {}
+[15.563756] (-) TimerEvent: {}
+[15.664586] (-) TimerEvent: {}
+[15.765360] (-) TimerEvent: {}
+[15.866726] (-) TimerEvent: {}
+[15.967869] (-) TimerEvent: {}
+[16.069269] (-) TimerEvent: {}
+[16.170089] (-) TimerEvent: {}
+[16.270895] (-) TimerEvent: {}
+[16.371766] (-) TimerEvent: {}
+[16.472691] (-) TimerEvent: {}
+[16.573544] (-) TimerEvent: {}
+[16.674500] (-) TimerEvent: {}
+[16.775491] (-) TimerEvent: {}
+[16.876798] (-) TimerEvent: {}
+[16.977765] (-) TimerEvent: {}
+[17.078599] (-) TimerEvent: {}
+[17.179478] (-) TimerEvent: {}
+[17.280476] (-) TimerEvent: {}
+[17.385249] (-) TimerEvent: {}
+[17.486047] (-) TimerEvent: {}
+[17.587162] (-) TimerEvent: {}
+[17.688180] (-) TimerEvent: {}
+[17.789084] (-) TimerEvent: {}
+[17.889897] (-) TimerEvent: {}
+[17.991175] (-) TimerEvent: {}
+[18.092260] (-) TimerEvent: {}
+[18.193341] (-) TimerEvent: {}
+[18.294924] (-) TimerEvent: {}
+[18.396177] (-) TimerEvent: {}
+[18.497137] (-) TimerEvent: {}
+[18.597960] (-) TimerEvent: {}
+[18.698751] (-) TimerEvent: {}
+[18.799637] (-) TimerEvent: {}
+[18.901118] (-) TimerEvent: {}
+[19.001958] (-) TimerEvent: {}
+[19.102733] (-) TimerEvent: {}
+[19.204306] (-) TimerEvent: {}
+[19.306207] (-) TimerEvent: {}
+[19.407452] (-) TimerEvent: {}
+[19.509074] (-) TimerEvent: {}
+[19.610476] (-) TimerEvent: {}
+[19.711327] (-) TimerEvent: {}
+[19.812226] (-) TimerEvent: {}
+[19.913438] (-) TimerEvent: {}
+[20.015046] (-) TimerEvent: {}
+[20.116103] (-) TimerEvent: {}
+[20.217686] (-) TimerEvent: {}
+[20.319585] (-) TimerEvent: {}
+[20.422039] (-) TimerEvent: {}
+[20.522876] (-) TimerEvent: {}
+[20.623735] (-) TimerEvent: {}
+[20.724570] (-) TimerEvent: {}
+[20.825470] (-) TimerEvent: {}
+[20.926462] (-) TimerEvent: {}
+[21.027304] (-) TimerEvent: {}
+[21.128220] (-) TimerEvent: {}
+[21.229661] (-) TimerEvent: {}
+[21.330630] (-) TimerEvent: {}
+[21.431550] (-) TimerEvent: {}
+[21.532610] (-) TimerEvent: {}
+[21.633879] (-) TimerEvent: {}
+[21.735200] (-) TimerEvent: {}
+[21.836068] (-) TimerEvent: {}
+[21.937578] (-) TimerEvent: {}
+[22.039055] (-) TimerEvent: {}
+[22.140801] (-) TimerEvent: {}
+[22.242227] (-) TimerEvent: {}
+[22.344151] (-) TimerEvent: {}
+[22.445525] (-) TimerEvent: {}
+[22.547009] (-) TimerEvent: {}
+[22.648596] (-) TimerEvent: {}
+[22.749661] (-) TimerEvent: {}
+[22.851384] (-) TimerEvent: {}
+[22.952854] (-) TimerEvent: {}
+[23.054332] (-) TimerEvent: {}
+[23.155222] (-) TimerEvent: {}
+[23.256047] (-) TimerEvent: {}
+[23.356829] (-) TimerEvent: {}
+[23.457664] (-) TimerEvent: {}
+[23.558522] (-) TimerEvent: {}
+[23.659481] (-) TimerEvent: {}
+[23.760579] (-) TimerEvent: {}
+[23.861363] (-) TimerEvent: {}
+[23.962102] (-) TimerEvent: {}
+[24.063122] (-) TimerEvent: {}
+[24.164345] (-) TimerEvent: {}
+[24.265105] (-) TimerEvent: {}
+[24.366184] (-) TimerEvent: {}
+[24.467788] (-) TimerEvent: {}
+[24.568511] (-) TimerEvent: {}
+[24.669309] (-) TimerEvent: {}
+[24.770223] (-) TimerEvent: {}
+[24.870982] (-) TimerEvent: {}
+[24.971764] (-) TimerEvent: {}
+[25.072741] (-) TimerEvent: {}
+[25.173571] (-) TimerEvent: {}
+[30.872354] (-) TimerEvent: {}
+[30.973222] (-) TimerEvent: {}
+[31.074052] (-) TimerEvent: {}
+[31.174915] (-) TimerEvent: {}
+[31.275918] (-) TimerEvent: {}
+[31.376844] (-) TimerEvent: {}
+[31.477662] (-) TimerEvent: {}
+[31.578456] (-) TimerEvent: {}
+[31.679221] (-) TimerEvent: {}
+[31.780094] (-) TimerEvent: {}
+[31.881379] (-) TimerEvent: {}
+[31.983827] (-) TimerEvent: {}
+[32.084762] (-) TimerEvent: {}
+[32.185775] (-) TimerEvent: {}
+[32.287131] (-) TimerEvent: {}
+[32.388306] (-) TimerEvent: {}
+[32.490463] (-) TimerEvent: {}
+[32.592097] (-) TimerEvent: {}
+[32.692940] (-) TimerEvent: {}
+[32.793863] (-) TimerEvent: {}
+[32.894683] (-) TimerEvent: {}
+[32.995491] (-) TimerEvent: {}
+[33.096640] (-) TimerEvent: {}
+[33.197827] (-) TimerEvent: {}
+[33.299249] (-) TimerEvent: {}
+[33.400671] (-) TimerEvent: {}
+[33.502136] (-) TimerEvent: {}
+[33.604185] (-) TimerEvent: {}
+[33.705023] (-) TimerEvent: {}
+[33.809939] (-) TimerEvent: {}
+[33.911162] (-) TimerEvent: {}
+[34.012079] (-) TimerEvent: {}
+[34.112914] (-) TimerEvent: {}
+[34.213860] (-) TimerEvent: {}
+[34.315221] (-) TimerEvent: {}
+[34.416643] (-) TimerEvent: {}
+[34.518349] (-) TimerEvent: {}
+[34.619699] (-) TimerEvent: {}
+[34.720484] (-) TimerEvent: {}
+[34.909300] (-) TimerEvent: {}
+[35.363079] (-) TimerEvent: {}
+[35.463862] (-) TimerEvent: {}
+[35.564977] (-) TimerEvent: {}
+[35.666521] (-) TimerEvent: {}
+[35.768063] (-) TimerEvent: {}
+[35.869858] (-) TimerEvent: {}
+[35.971350] (-) TimerEvent: {}
+[36.073230] (-) TimerEvent: {}
+[36.174247] (-) TimerEvent: {}
+[36.275857] (-) TimerEvent: {}
+[36.376892] (-) TimerEvent: {}
+[36.478430] (-) TimerEvent: {}
+[36.579827] (-) TimerEvent: {}
+[36.681313] (-) TimerEvent: {}
+[36.782194] (-) TimerEvent: {}
+[36.883133] (-) TimerEvent: {}
+[36.984137] (-) TimerEvent: {}
+[37.086408] (-) TimerEvent: {}
+[37.188164] (-) TimerEvent: {}
+[37.288960] (-) TimerEvent: {}
+[37.389832] (-) TimerEvent: {}
+[37.491050] (-) TimerEvent: {}
+[37.592690] (-) TimerEvent: {}
+[37.694297] (-) TimerEvent: {}
+[37.795077] (-) TimerEvent: {}
+[37.895878] (-) TimerEvent: {}
+[37.996936] (-) TimerEvent: {}
+[38.097978] (-) TimerEvent: {}
+[38.200343] (-) TimerEvent: {}
+[38.301331] (-) TimerEvent: {}
+[38.402253] (-) TimerEvent: {}
+[38.503369] (-) TimerEvent: {}
+[38.604796] (-) TimerEvent: {}
+[38.706427] (-) TimerEvent: {}
+[38.807840] (-) TimerEvent: {}
+[38.908764] (-) TimerEvent: {}
+[39.009714] (-) TimerEvent: {}
+[39.110470] (-) TimerEvent: {}
+[39.211357] (-) TimerEvent: {}
+[39.315628] (-) TimerEvent: {}
+[39.416503] (-) TimerEvent: {}
+[39.517585] (-) TimerEvent: {}
+[39.618583] (-) TimerEvent: {}
+[39.719797] (-) TimerEvent: {}
+[39.820944] (-) TimerEvent: {}
+[39.922050] (-) TimerEvent: {}
+[40.022873] (-) TimerEvent: {}
+[40.123893] (-) TimerEvent: {}
+[40.224799] (-) TimerEvent: {}
+[40.326089] (-) TimerEvent: {}
+[40.427394] (-) TimerEvent: {}
+[40.528237] (-) TimerEvent: {}
+[40.629234] (-) TimerEvent: {}
+[40.731334] (-) TimerEvent: {}
+[40.832624] (-) TimerEvent: {}
+[40.933397] (-) TimerEvent: {}
+[41.034154] (-) TimerEvent: {}
+[41.134962] (-) TimerEvent: {}
+[41.235838] (-) TimerEvent: {}
+[41.336698] (-) TimerEvent: {}
+[41.438183] (-) TimerEvent: {}
+[41.538967] (-) TimerEvent: {}
+[41.639823] (-) TimerEvent: {}
+[41.742542] (-) TimerEvent: {}
+[41.843370] (-) TimerEvent: {}
+[41.944288] (-) TimerEvent: {}
+[42.045898] (-) TimerEvent: {}
+[42.146706] (-) TimerEvent: {}
+[42.247523] (-) TimerEvent: {}
+[42.348376] (-) TimerEvent: {}
+[42.449214] (-) TimerEvent: {}
+[42.550360] (-) TimerEvent: {}
+[42.651177] (-) TimerEvent: {}
+[42.752014] (-) TimerEvent: {}
+[42.852862] (-) TimerEvent: {}
+[42.953628] (-) TimerEvent: {}
+[43.054424] (-) TimerEvent: {}
+[43.155229] (-) TimerEvent: {}
+[43.256078] (-) TimerEvent: {}
+[43.357050] (-) TimerEvent: {}
+[43.457934] (-) TimerEvent: {}
+[43.558761] (-) TimerEvent: {}
+[43.659576] (-) TimerEvent: {}
+[43.760443] (-) TimerEvent: {}
+[43.861378] (-) TimerEvent: {}
+[43.967846] (-) TimerEvent: {}
+[44.068684] (-) TimerEvent: {}
+[44.169512] (-) TimerEvent: {}
+[44.270335] (-) TimerEvent: {}
+[44.371552] (-) TimerEvent: {}
+[44.472965] (-) TimerEvent: {}
+[44.574627] (-) TimerEvent: {}
+[44.675711] (-) TimerEvent: {}
+[44.776667] (-) TimerEvent: {}
+[44.878788] (-) TimerEvent: {}
+[44.980763] (-) TimerEvent: {}
+[45.084753] (-) TimerEvent: {}
+[45.186570] (-) TimerEvent: {}
+[45.287340] (-) TimerEvent: {}
+[45.388278] (-) TimerEvent: {}
+[45.490002] (-) TimerEvent: {}
+[45.591290] (-) TimerEvent: {}
+[45.693734] (-) TimerEvent: {}
+[45.796623] (-) TimerEvent: {}
+[45.898754] (-) TimerEvent: {}
+[46.000271] (-) TimerEvent: {}
+[46.101249] (-) TimerEvent: {}
+[46.202708] (-) TimerEvent: {}
+[46.303496] (-) TimerEvent: {}
+[46.404273] (-) TimerEvent: {}
+[46.505119] (-) TimerEvent: {}
+[46.606018] (-) TimerEvent: {}
+[46.706961] (-) TimerEvent: {}
+[46.809477] (-) TimerEvent: {}
+[46.912835] (-) TimerEvent: {}
+[47.015850] (-) TimerEvent: {}
+[47.118806] (-) TimerEvent: {}
+[47.220000] (-) TimerEvent: {}
+[47.320806] (-) TimerEvent: {}
+[47.421580] (-) TimerEvent: {}
+[47.522370] (-) TimerEvent: {}
+[47.623172] (-) TimerEvent: {}
+[47.723987] (-) TimerEvent: {}
+[47.824864] (-) TimerEvent: {}
+[47.932032] (-) TimerEvent: {}
+[48.033056] (-) TimerEvent: {}
+[48.133948] (-) TimerEvent: {}
+[48.234839] (-) TimerEvent: {}
+[48.335745] (-) TimerEvent: {}
+[48.437570] (-) TimerEvent: {}
+[48.538384] (-) TimerEvent: {}
+[48.639300] (-) TimerEvent: {}
+[48.740106] (-) TimerEvent: {}
+[48.840855] (-) TimerEvent: {}
+[48.941648] (-) TimerEvent: {}
+[49.042722] (-) TimerEvent: {}
+[49.144713] (-) TimerEvent: {}
+[49.245599] (-) TimerEvent: {}
+[49.347168] (-) TimerEvent: {}
+[49.449875] (-) TimerEvent: {}
+[49.552016] (-) TimerEvent: {}
+[49.654152] (-) TimerEvent: {}
+[49.755061] (-) TimerEvent: {}
+[49.856513] (-) TimerEvent: {}
+[49.957325] (-) TimerEvent: {}
+[50.058091] (-) TimerEvent: {}
+[50.158833] (-) TimerEvent: {}
+[50.259551] (-) TimerEvent: {}
+[50.360454] (-) TimerEvent: {}
+[50.467272] (-) TimerEvent: {}
+[50.568094] (-) TimerEvent: {}
+[50.668902] (-) TimerEvent: {}
+[50.769654] (-) TimerEvent: {}
+[50.870463] (-) TimerEvent: {}
+[50.971241] (-) TimerEvent: {}
+[51.072260] (-) TimerEvent: {}
+[51.174041] (-) TimerEvent: {}
+[51.274986] (-) TimerEvent: {}
+[51.376427] (-) TimerEvent: {}
+[51.477431] (-) TimerEvent: {}
+[51.578312] (-) TimerEvent: {}
+[51.683605] (-) TimerEvent: {}
+[51.784648] (-) TimerEvent: {}
+[51.885492] (-) TimerEvent: {}
+[51.986418] (-) TimerEvent: {}
+[52.087309] (-) TimerEvent: {}
+[52.188103] (-) TimerEvent: {}
+[52.292599] (-) TimerEvent: {}
+[52.393372] (-) TimerEvent: {}
+[52.494141] (-) TimerEvent: {}
+[52.594935] (-) TimerEvent: {}
+[52.695744] (-) TimerEvent: {}
+[52.796543] (-) TimerEvent: {}
+[52.897784] (-) TimerEvent: {}
+[52.998847] (-) TimerEvent: {}
+[53.099591] (-) TimerEvent: {}
+[53.200427] (-) TimerEvent: {}
+[53.301195] (-) TimerEvent: {}
+[53.401990] (-) TimerEvent: {}
+[53.503046] (-) TimerEvent: {}
+[53.604346] (-) TimerEvent: {}
+[53.706521] (-) TimerEvent: {}
+[53.807355] (-) TimerEvent: {}
+[53.908252] (-) TimerEvent: {}
+[54.009213] (-) TimerEvent: {}
+[54.110021] (-) TimerEvent: {}
+[54.211030] (-) TimerEvent: {}
+[54.312399] (-) TimerEvent: {}
+[54.413203] (-) TimerEvent: {}
+[54.514005] (-) TimerEvent: {}
+[54.614961] (-) TimerEvent: {}
+[54.715817] (-) TimerEvent: {}
+[54.816614] (-) TimerEvent: {}
+[54.918040] (-) TimerEvent: {}
+[55.018751] (-) TimerEvent: {}
+[55.119573] (-) TimerEvent: {}
+[55.220473] (-) TimerEvent: {}
+[55.321604] (-) TimerEvent: {}
+[55.422363] (-) TimerEvent: {}
+[55.523116] (-) TimerEvent: {}
+[55.623936] (-) TimerEvent: {}
+[55.724732] (-) TimerEvent: {}
+[55.825660] (-) TimerEvent: {}
+[55.927013] (-) TimerEvent: {}
+[56.028101] (-) TimerEvent: {}
+[56.129156] (-) TimerEvent: {}
+[56.230852] (-) TimerEvent: {}
+[56.332217] (-) TimerEvent: {}
+[56.433135] (-) TimerEvent: {}
+[56.534053] (-) TimerEvent: {}
+[56.635039] (-) TimerEvent: {}
+[56.735818] (-) TimerEvent: {}
+[56.836882] (-) TimerEvent: {}
+[56.937660] (-) TimerEvent: {}
+[57.038655] (-) TimerEvent: {}
+[57.140227] (-) TimerEvent: {}
+[57.242847] (-) TimerEvent: {}
+[57.343624] (-) TimerEvent: {}
+[57.444482] (-) TimerEvent: {}
+[57.545680] (-) TimerEvent: {}
+[57.647813] (-) TimerEvent: {}
+[57.748627] (-) TimerEvent: {}
+[57.849597] (-) TimerEvent: {}
+[57.950472] (-) TimerEvent: {}
+[58.051931] (-) TimerEvent: {}
+[58.154568] (-) TimerEvent: {}
+[58.880282] (-) TimerEvent: {}
+[58.981249] (-) TimerEvent: {}
+[59.082046] (-) TimerEvent: {}
+[59.182888] (-) TimerEvent: {}
+[59.283753] (-) TimerEvent: {}
+[59.384648] (-) TimerEvent: {}
+[59.485417] (-) TimerEvent: {}
+[59.586203] (-) TimerEvent: {}
+[59.687194] (-) TimerEvent: {}
+[59.788243] (-) TimerEvent: {}
+[59.889742] (-) TimerEvent: {}
+[59.992061] (-) TimerEvent: {}
+[60.094577] (-) TimerEvent: {}
+[60.196668] (-) TimerEvent: {}
+[60.297540] (-) TimerEvent: {}
+[60.398571] (-) TimerEvent: {}
+[60.499451] (-) TimerEvent: {}
+[60.600774] (-) TimerEvent: {}
+[60.701747] (-) TimerEvent: {}
+[60.803043] (-) TimerEvent: {}
+[60.904107] (-) TimerEvent: {}
+[61.005472] (-) TimerEvent: {}
+[61.108281] (-) TimerEvent: {}
+[61.209075] (-) TimerEvent: {}
+[61.309864] (-) TimerEvent: {}
+[61.410668] (-) TimerEvent: {}
+[61.511891] (-) TimerEvent: {}
+[61.613750] (-) TimerEvent: {}
+[61.715484] (-) TimerEvent: {}
+[61.816398] (-) TimerEvent: {}
+[61.917348] (-) TimerEvent: {}
+[62.018249] (-) TimerEvent: {}
+[62.179975] (-) TimerEvent: {}
+[62.280849] (-) TimerEvent: {}
+[62.382400] (-) TimerEvent: {}
+[62.484621] (-) TimerEvent: {}
+[62.586704] (-) TimerEvent: {}
+[62.688413] (-) TimerEvent: {}
+[62.789182] (-) TimerEvent: {}
+[62.890043] (-) TimerEvent: {}
+[62.990863] (-) TimerEvent: {}
+[63.092347] (-) TimerEvent: {}
+[63.193240] (-) TimerEvent: {}
+[63.294120] (-) TimerEvent: {}
+[63.394890] (-) TimerEvent: {}
+[63.495748] (-) TimerEvent: {}
+[63.596558] (-) TimerEvent: {}
+[63.698820] (-) TimerEvent: {}
+[63.800932] (-) TimerEvent: {}
+[63.901908] (-) TimerEvent: {}
+[64.005123] (-) TimerEvent: {}
+[64.107448] (-) TimerEvent: {}
+[64.210396] (-) TimerEvent: {}
+[64.312019] (-) TimerEvent: {}
+[64.412934] (-) TimerEvent: {}
+[64.516561] (-) TimerEvent: {}
+[64.617460] (-) TimerEvent: {}
+[64.718276] (-) TimerEvent: {}
+[66.321460] (-) TimerEvent: {}
+[66.424397] (-) TimerEvent: {}
+[66.525295] (-) TimerEvent: {}
+[66.626913] (-) TimerEvent: {}
+[66.730344] (-) TimerEvent: {}
+[66.832603] (-) TimerEvent: {}
+[66.933329] (-) TimerEvent: {}
+[67.034258] (-) TimerEvent: {}
+[67.135178] (-) TimerEvent: {}
+[67.236124] (-) TimerEvent: {}
+[67.337350] (-) TimerEvent: {}
+[67.439257] (-) TimerEvent: {}
+[67.541172] (-) TimerEvent: {}
+[67.641984] (-) TimerEvent: {}
+[67.742765] (-) TimerEvent: {}
+[67.843774] (-) TimerEvent: {}
+[67.945329] (-) TimerEvent: {}
+[68.047235] (-) TimerEvent: {}
+[68.148108] (-) TimerEvent: {}
+[68.248920] (-) TimerEvent: {}
+[68.350550] (-) TimerEvent: {}
+[68.452466] (-) TimerEvent: {}
+[68.553825] (-) TimerEvent: {}
+[68.654596] (-) TimerEvent: {}
+[68.755978] (-) TimerEvent: {}
+[68.856779] (-) TimerEvent: {}
+[68.957523] (-) TimerEvent: {}
+[69.058506] (-) TimerEvent: {}
+[69.159379] (-) TimerEvent: {}
+[69.260286] (-) TimerEvent: {}
+[69.361193] (-) TimerEvent: {}
+[69.462131] (-) TimerEvent: {}
+[69.563542] (-) TimerEvent: {}
+[69.665682] (-) TimerEvent: {}
+[69.767033] (-) TimerEvent: {}
+[69.867951] (-) TimerEvent: {}
+[69.968847] (-) TimerEvent: {}
+[70.069895] (-) TimerEvent: {}
+[70.170698] (-) TimerEvent: {}
+[70.271500] (-) TimerEvent: {}
+[70.372330] (-) TimerEvent: {}
+[70.473133] (-) TimerEvent: {}
+[70.573935] (-) TimerEvent: {}
+[70.674738] (-) TimerEvent: {}
+[70.775505] (-) TimerEvent: {}
+[70.876355] (-) TimerEvent: {}
+[70.977168] (-) TimerEvent: {}
+[71.078042] (-) TimerEvent: {}
+[71.178858] (-) TimerEvent: {}
+[71.279628] (-) TimerEvent: {}
+[71.380572] (-) TimerEvent: {}
+[71.481402] (-) TimerEvent: {}
+[71.582266] (-) TimerEvent: {}
+[71.683328] (-) TimerEvent: {}
+[71.784369] (-) TimerEvent: {}
+[71.885544] (-) TimerEvent: {}
+[71.986347] (-) TimerEvent: {}
+[72.087290] (-) TimerEvent: {}
+[72.188117] (-) TimerEvent: {}
+[72.288957] (-) TimerEvent: {}
+[72.389822] (-) TimerEvent: {}
+[72.495174] (-) TimerEvent: {}
+[72.596094] (-) TimerEvent: {}
+[72.697088] (-) TimerEvent: {}
+[72.798108] (-) TimerEvent: {}
+[72.899372] (-) TimerEvent: {}
+[73.000289] (-) TimerEvent: {}
+[73.101082] (-) TimerEvent: {}
+[73.202057] (-) TimerEvent: {}
+[73.303283] (-) TimerEvent: {}
+[73.404470] (-) TimerEvent: {}
+[73.505568] (-) TimerEvent: {}
+[73.606401] (-) TimerEvent: {}
+[73.707313] (-) TimerEvent: {}
+[73.808722] (-) TimerEvent: {}
+[73.909730] (-) TimerEvent: {}
+[74.010687] (-) TimerEvent: {}
+[74.111516] (-) TimerEvent: {}
+[74.212413] (-) TimerEvent: {}
+[74.313832] (-) TimerEvent: {}
+[74.415117] (-) TimerEvent: {}
+[74.516956] (-) TimerEvent: {}
+[74.618104] (-) TimerEvent: {}
+[74.719393] (-) TimerEvent: {}
+[74.820332] (-) TimerEvent: {}
+[74.921487] (-) TimerEvent: {}
+[75.023772] (-) TimerEvent: {}
+[75.126371] (-) TimerEvent: {}
+[75.227142] (-) TimerEvent: {}
+[75.328006] (-) TimerEvent: {}
+[75.429088] (-) TimerEvent: {}
+[75.529951] (-) TimerEvent: {}
+[75.630803] (-) TimerEvent: {}
+[75.732591] (-) TimerEvent: {}
+[75.833334] (-) TimerEvent: {}
+[75.934089] (-) TimerEvent: {}
+[76.035376] (-) TimerEvent: {}
+[76.136758] (-) TimerEvent: {}
+[76.237533] (-) TimerEvent: {}
+[76.338409] (-) TimerEvent: {}
+[76.439815] (-) TimerEvent: {}
+[76.541074] (-) TimerEvent: {}
+[76.641931] (-) TimerEvent: {}
+[76.742708] (-) TimerEvent: {}
+[76.843575] (-) TimerEvent: {}
+[76.944799] (-) TimerEvent: {}
+[77.046296] (-) TimerEvent: {}
+[77.148650] (-) TimerEvent: {}
+[77.251646] (-) TimerEvent: {}
+[77.352464] (-) TimerEvent: {}
+[77.453556] (-) TimerEvent: {}
+[77.554599] (-) TimerEvent: {}
+[77.655554] (-) TimerEvent: {}
+[77.756371] (-) TimerEvent: {}
+[77.857126] (-) TimerEvent: {}
+[77.957908] (-) TimerEvent: {}
+[78.058682] (-) TimerEvent: {}
+[78.159473] (-) TimerEvent: {}
+[78.260389] (-) TimerEvent: {}
+[78.361335] (-) TimerEvent: {}
+[78.462272] (-) TimerEvent: {}
+[78.563228] (-) TimerEvent: {}
+[78.665477] (-) TimerEvent: {}
+[78.766455] (-) TimerEvent: {}
+[78.867556] (-) TimerEvent: {}
+[78.968543] (-) TimerEvent: {}
+[79.069679] (-) TimerEvent: {}
+[79.170699] (-) TimerEvent: {}
+[79.271470] (-) TimerEvent: {}
+[79.376066] (-) TimerEvent: {}
+[79.477085] (-) TimerEvent: {}
+[79.578410] (-) TimerEvent: {}
+[79.680246] (-) TimerEvent: {}
+[79.781343] (-) TimerEvent: {}
+[79.882267] (-) TimerEvent: {}
+[79.983241] (-) TimerEvent: {}
+[80.084030] (-) TimerEvent: {}
+[80.185310] (-) TimerEvent: {}
+[80.287735] (-) TimerEvent: {}
+[80.388757] (-) TimerEvent: {}
+[80.490536] (-) TimerEvent: {}
+[80.591779] (-) TimerEvent: {}
+[80.693659] (-) TimerEvent: {}
+[80.795296] (-) TimerEvent: {}
+[80.897350] (-) TimerEvent: {}
+[80.998112] (-) TimerEvent: {}
+[81.098844] (-) TimerEvent: {}
+[81.203433] (-) TimerEvent: {}
+[81.304275] (-) TimerEvent: {}
+[81.405114] (-) TimerEvent: {}
+[81.505888] (-) TimerEvent: {}
+[81.606717] (-) TimerEvent: {}
+[81.707525] (-) TimerEvent: {}
+[81.808810] (-) TimerEvent: {}
+[81.909913] (-) TimerEvent: {}
+[82.011448] (-) TimerEvent: {}
+[82.113102] (-) TimerEvent: {}
+[82.215381] (-) TimerEvent: {}
+[82.318506] (-) TimerEvent: {}
+[82.419308] (-) TimerEvent: {}
+[82.520155] (-) TimerEvent: {}
+[82.620912] (-) TimerEvent: {}
+[82.721675] (-) TimerEvent: {}
+[82.822535] (-) TimerEvent: {}
+[82.923349] (-) TimerEvent: {}
+[83.024221] (-) TimerEvent: {}
+[83.125155] (-) TimerEvent: {}
+[83.226273] (-) TimerEvent: {}
+[83.327110] (-) TimerEvent: {}
+[83.427972] (-) TimerEvent: {}
+[83.528856] (-) TimerEvent: {}
+[83.630135] (-) TimerEvent: {}
+[83.731099] (-) TimerEvent: {}
+[83.832139] (-) TimerEvent: {}
+[83.932916] (-) TimerEvent: {}
+[84.033672] (-) TimerEvent: {}
+[84.134429] (-) TimerEvent: {}
+[84.235273] (-) TimerEvent: {}
+[84.336152] (-) TimerEvent: {}
+[84.437491] (-) TimerEvent: {}
+[84.538694] (-) TimerEvent: {}
+[84.640206] (-) TimerEvent: {}
+[84.741390] (-) TimerEvent: {}
+[84.842270] (-) TimerEvent: {}
+[84.943095] (-) TimerEvent: {}
+[85.044173] (-) TimerEvent: {}
+[85.145404] (-) TimerEvent: {}
+[85.246392] (-) TimerEvent: {}
+[85.347778] (-) TimerEvent: {}
+[85.448635] (-) TimerEvent: {}
+[85.549517] (-) TimerEvent: {}
+[85.650440] (-) TimerEvent: {}
+[85.751225] (-) TimerEvent: {}
+[85.852076] (-) TimerEvent: {}
+[85.952848] (-) TimerEvent: {}
+[86.053613] (-) TimerEvent: {}
+[86.154401] (-) TimerEvent: {}
+[86.255123] (-) TimerEvent: {}
+[86.355906] (-) TimerEvent: {}
+[86.457131] (-) TimerEvent: {}
+[86.559102] (-) TimerEvent: {}
+[86.660072] (-) TimerEvent: {}
+[86.761095] (-) TimerEvent: {}
+[86.861952] (-) TimerEvent: {}
+[86.962766] (-) TimerEvent: {}
+[87.063590] (-) TimerEvent: {}
+[87.164424] (-) TimerEvent: {}
+[87.265236] (-) TimerEvent: {}
+[87.366086] (-) TimerEvent: {}
+[87.467084] (-) TimerEvent: {}
+[87.568548] (-) TimerEvent: {}
+[87.669281] (-) TimerEvent: {}
+[87.770057] (-) TimerEvent: {}
+[87.870824] (-) TimerEvent: {}
+[87.971773] (-) TimerEvent: {}
+[88.073696] (-) TimerEvent: {}
+[88.174721] (-) TimerEvent: {}
+[88.276126] (-) TimerEvent: {}
+[88.376947] (-) TimerEvent: {}
+[88.477725] (-) TimerEvent: {}
+[88.578603] (-) TimerEvent: {}
+[88.679373] (-) TimerEvent: {}
+[88.780313] (-) TimerEvent: {}
+[88.881244] (-) TimerEvent: {}
+[88.982363] (-) TimerEvent: {}
+[89.083602] (-) TimerEvent: {}
+[89.185878] (-) TimerEvent: {}
+[89.288403] (-) TimerEvent: {}
+[89.391084] (-) TimerEvent: {}
+[89.492383] (-) TimerEvent: {}
+[89.593763] (-) TimerEvent: {}
+[89.694510] (-) TimerEvent: {}
+[89.795370] (-) TimerEvent: {}
+[89.896290] (-) TimerEvent: {}
+[89.997284] (-) TimerEvent: {}
+[90.099485] (-) TimerEvent: {}
+[90.200819] (-) TimerEvent: {}
+[90.302124] (-) TimerEvent: {}
+[90.403788] (-) TimerEvent: {}
+[90.505592] (-) TimerEvent: {}
+[90.607211] (-) TimerEvent: {}
+[90.708237] (-) TimerEvent: {}
+[90.809095] (-) TimerEvent: {}
+[90.909872] (-) TimerEvent: {}
+[91.010750] (-) TimerEvent: {}
+[91.111785] (-) TimerEvent: {}
+[91.212798] (-) TimerEvent: {}
+[91.313615] (-) TimerEvent: {}
+[91.414558] (-) TimerEvent: {}
+[91.515324] (-) TimerEvent: {}
+[91.616185] (-) TimerEvent: {}
+[91.717469] (-) TimerEvent: {}
+[91.818359] (-) TimerEvent: {}
+[91.919824] (-) TimerEvent: {}
+[92.020663] (-) TimerEvent: {}
+[92.121546] (-) TimerEvent: {}
+[92.222413] (-) TimerEvent: {}
+[92.324045] (-) TimerEvent: {}
+[92.426036] (-) TimerEvent: {}
+[92.526821] (-) TimerEvent: {}
+[92.628101] (-) TimerEvent: {}
+[92.736843] (-) TimerEvent: {}
+[92.838268] (-) TimerEvent: {}
+[92.939095] (-) TimerEvent: {}
+[93.039950] (-) TimerEvent: {}
+[93.140805] (-) TimerEvent: {}
+[93.241598] (-) TimerEvent: {}
+[93.342523] (-) TimerEvent: {}
+[93.443440] (-) TimerEvent: {}
+[93.544246] (-) TimerEvent: {}
+[93.645182] (-) TimerEvent: {}
+[93.746293] (-) TimerEvent: {}
+[93.847463] (-) TimerEvent: {}
+[93.948634] (-) TimerEvent: {}
+[94.049551] (-) TimerEvent: {}
+[94.150951] (-) TimerEvent: {}
+[94.251971] (-) TimerEvent: {}
+[94.352751] (-) TimerEvent: {}
+[94.453533] (-) TimerEvent: {}
+[94.554318] (-) TimerEvent: {}
+[94.655284] (-) TimerEvent: {}
+[94.756342] (-) TimerEvent: {}
+[94.857374] (-) TimerEvent: {}
+[94.958645] (-) TimerEvent: {}
+[95.059629] (-) TimerEvent: {}
+[95.160422] (-) TimerEvent: {}
+[95.261197] (-) TimerEvent: {}
+[95.361957] (-) TimerEvent: {}
+[95.462739] (-) TimerEvent: {}
+[95.564120] (-) TimerEvent: {}
+[95.664966] (-) TimerEvent: {}
+[95.766206] (-) TimerEvent: {}
+[95.867572] (-) TimerEvent: {}
+[95.968606] (-) TimerEvent: {}
+[96.069502] (-) TimerEvent: {}
+[96.170331] (-) TimerEvent: {}
+[96.271082] (-) TimerEvent: {}
+[96.372102] (-) TimerEvent: {}
+[96.473171] (-) TimerEvent: {}
+[96.573986] (-) TimerEvent: {}
+[96.674739] (-) TimerEvent: {}
+[96.775471] (-) TimerEvent: {}
+[98.600858] (-) TimerEvent: {}
+[101.212431] (-) TimerEvent: {}
+[103.664409] (-) TimerEvent: {}
+[106.082539] (-) TimerEvent: {}
+[106.184875] (-) TimerEvent: {}
+[106.285968] (-) TimerEvent: {}
+[106.387820] (-) TimerEvent: {}
+[106.488889] (-) TimerEvent: {}
+[106.591366] (-) TimerEvent: {}
+[106.692455] (-) TimerEvent: {}
+[106.793492] (-) TimerEvent: {}
+[106.894713] (-) TimerEvent: {}
+[106.995814] (-) TimerEvent: {}
+[107.096609] (-) TimerEvent: {}
+[107.197376] (-) TimerEvent: {}
+[107.298208] (-) TimerEvent: {}
+[107.399070] (-) TimerEvent: {}
+[107.500349] (-) TimerEvent: {}
+[107.601250] (-) TimerEvent: {}
+[107.702036] (-) TimerEvent: {}
+[107.802826] (-) TimerEvent: {}
+[107.903798] (-) TimerEvent: {}
+[108.004642] (-) TimerEvent: {}
+[108.105447] (-) TimerEvent: {}
+[108.206169] (-) TimerEvent: {}
+[108.306965] (-) TimerEvent: {}
+[108.407757] (-) TimerEvent: {}
+[108.508716] (-) TimerEvent: {}
+[108.609922] (-) TimerEvent: {}
+[108.717326] (-) TimerEvent: {}
+[108.818166] (-) TimerEvent: {}
+[108.919536] (-) TimerEvent: {}
+[109.021083] (-) TimerEvent: {}
+[109.121896] (-) TimerEvent: {}
+[109.222688] (-) TimerEvent: {}
+[109.324323] (-) TimerEvent: {}
+[109.427472] (-) TimerEvent: {}
+[109.528839] (-) TimerEvent: {}
+[109.629635] (-) TimerEvent: {}
+[109.730410] (-) TimerEvent: {}
+[109.831188] (-) TimerEvent: {}
+[109.932230] (-) TimerEvent: {}
+[110.033490] (-) TimerEvent: {}
+[110.134355] (-) TimerEvent: {}
+[110.235254] (-) TimerEvent: {}
+[110.336217] (-) TimerEvent: {}
+[110.437269] (-) TimerEvent: {}
+[110.538515] (-) TimerEvent: {}
+[110.639779] (-) TimerEvent: {}
+[110.740714] (-) TimerEvent: {}
+[110.843114] (-) TimerEvent: {}
+[110.950883] (-) TimerEvent: {}
+[111.051855] (-) TimerEvent: {}
+[111.153147] (-) TimerEvent: {}
+[111.253918] (-) TimerEvent: {}
+[111.354839] (-) TimerEvent: {}
+[111.456564] (-) TimerEvent: {}
+[111.557710] (-) TimerEvent: {}
+[111.658779] (-) TimerEvent: {}
+[111.759568] (-) TimerEvent: {}
+[111.860437] (-) TimerEvent: {}
+[111.961158] (-) TimerEvent: {}
+[112.063031] (-) TimerEvent: {}
+[112.163999] (-) TimerEvent: {}
+[112.264913] (-) TimerEvent: {}
+[112.366246] (-) TimerEvent: {}
+[112.467460] (-) TimerEvent: {}
+[112.569630] (-) TimerEvent: {}
+[112.671758] (-) TimerEvent: {}
+[112.773787] (-) TimerEvent: {}
+[112.874896] (-) TimerEvent: {}
+[112.975790] (-) TimerEvent: {}
+[113.076570] (-) TimerEvent: {}
+[113.177421] (-) TimerEvent: {}
+[113.278851] (-) TimerEvent: {}
+[113.381493] (-) TimerEvent: {}
+[113.482916] (-) TimerEvent: {}
+[113.585140] (-) TimerEvent: {}
+[113.686392] (-) TimerEvent: {}
+[113.787381] (-) TimerEvent: {}
+[113.889589] (-) TimerEvent: {}
+[113.992244] (-) TimerEvent: {}
+[114.093037] (-) TimerEvent: {}
+[114.193968] (-) TimerEvent: {}
+[114.295261] (-) TimerEvent: {}
+[114.396995] (-) TimerEvent: {}
+[114.498149] (-) TimerEvent: {}
+[114.599498] (-) TimerEvent: {}
+[114.701493] (-) TimerEvent: {}
+[114.802621] (-) TimerEvent: {}
+[114.903518] (-) TimerEvent: {}
+[115.004583] (-) TimerEvent: {}
+[115.105465] (-) TimerEvent: {}
+[115.206237] (-) TimerEvent: {}
+[115.307927] (-) TimerEvent: {}
+[115.454094] (-) TimerEvent: {}
+[115.555851] (-) TimerEvent: {}
+[115.656925] (-) TimerEvent: {}
+[115.760381] (-) TimerEvent: {}
+[115.862229] (-) TimerEvent: {}
+[115.965212] (-) TimerEvent: {}
+[116.066211] (-) TimerEvent: {}
+[116.167643] (-) TimerEvent: {}
+[116.268489] (-) TimerEvent: {}
+[116.369456] (-) TimerEvent: {}
+[116.471012] (-) TimerEvent: {}
+[116.572091] (-) TimerEvent: {}
+[116.673707] (-) TimerEvent: {}
+[116.774823] (-) TimerEvent: {}
+[116.876532] (-) TimerEvent: {}
+[116.977359] (-) TimerEvent: {}
+[117.078195] (-) TimerEvent: {}
+[117.179183] (-) TimerEvent: {}
+[117.280221] (-) TimerEvent: {}
+[117.381004] (-) TimerEvent: {}
+[117.481745] (-) TimerEvent: {}
+[117.582502] (-) TimerEvent: {}
+[117.683272] (-) TimerEvent: {}
+[117.784383] (-) TimerEvent: {}
+[117.885174] (-) TimerEvent: {}
+[117.986058] (-) TimerEvent: {}
+[118.087083] (-) TimerEvent: {}
+[118.188766] (-) TimerEvent: {}
+[118.291982] (-) TimerEvent: {}
+[118.394322] (-) TimerEvent: {}
+[118.495207] (-) TimerEvent: {}
+[118.596268] (-) TimerEvent: {}
+[118.697596] (-) TimerEvent: {}
+[118.799489] (-) TimerEvent: {}
+[118.900303] (-) TimerEvent: {}
+[119.001341] (-) TimerEvent: {}
+[119.102817] (-) TimerEvent: {}
+[119.204106] (-) TimerEvent: {}
+[119.305045] (-) TimerEvent: {}
+[119.406533] (-) TimerEvent: {}
+[119.509341] (-) TimerEvent: {}
+[119.612374] (-) TimerEvent: {}
+[119.713806] (-) TimerEvent: {}
+[119.814951] (-) TimerEvent: {}
+[119.916218] (-) TimerEvent: {}
+[120.018074] (-) TimerEvent: {}
+[120.118883] (-) TimerEvent: {}
+[120.219735] (-) TimerEvent: {}
+[120.320517] (-) TimerEvent: {}
+[120.421305] (-) TimerEvent: {}
+[120.522181] (-) TimerEvent: {}
+[120.623197] (-) TimerEvent: {}
+[120.724784] (-) TimerEvent: {}
+[120.828341] (-) TimerEvent: {}
+[120.932697] (-) TimerEvent: {}
+[121.034721] (-) TimerEvent: {}
+[121.136481] (-) TimerEvent: {}
+[121.237439] (-) TimerEvent: {}
+[121.338246] (-) TimerEvent: {}
+[121.439284] (-) TimerEvent: {}
+[121.540686] (-) TimerEvent: {}
+[121.642208] (-) TimerEvent: {}
+[121.743545] (-) TimerEvent: {}
+[121.844794] (-) TimerEvent: {}
+[121.945523] (-) TimerEvent: {}
+[122.046431] (-) TimerEvent: {}
+[122.149627] (-) TimerEvent: {}
+[122.250589] (-) TimerEvent: {}
+[122.351613] (-) TimerEvent: {}
+[122.453193] (-) TimerEvent: {}
+[122.554664] (-) TimerEvent: {}
+[122.655827] (-) TimerEvent: {}
+[122.756951] (-) TimerEvent: {}
+[122.859273] (-) TimerEvent: {}
+[122.960681] (-) TimerEvent: {}
+[123.061796] (-) TimerEvent: {}
+[123.162985] (-) TimerEvent: {}
+[123.264739] (-) TimerEvent: {}
+[123.365980] (-) TimerEvent: {}
+[123.467048] (-) TimerEvent: {}
+[123.569122] (-) TimerEvent: {}
+[123.669928] (-) TimerEvent: {}
+[123.770867] (-) TimerEvent: {}
+[123.872883] (-) TimerEvent: {}
+[123.975409] (-) TimerEvent: {}
+[124.077321] (-) TimerEvent: {}
+[124.179263] (-) TimerEvent: {}
+[124.280056] (-) TimerEvent: {}
+[124.380882] (-) TimerEvent: {}
+[124.482128] (-) TimerEvent: {}
+[124.584117] (-) TimerEvent: {}
+[124.686250] (-) TimerEvent: {}
+[125.185508] (-) TimerEvent: {}
+[125.480288] (-) TimerEvent: {}
+[125.581068] (-) TimerEvent: {}
+[125.681862] (-) TimerEvent: {}
+[125.782631] (-) TimerEvent: {}
+[125.883380] (-) TimerEvent: {}
+[125.984186] (-) TimerEvent: {}
+[126.085516] (-) TimerEvent: {}
+[126.186981] (-) TimerEvent: {}
+[126.288132] (-) TimerEvent: {}
+[126.389399] (-) TimerEvent: {}
+[126.490970] (-) TimerEvent: {}
+[126.591779] (-) TimerEvent: {}
+[126.692811] (-) TimerEvent: {}
+[126.793851] (-) TimerEvent: {}
+[126.895402] (-) TimerEvent: {}
+[126.996282] (-) TimerEvent: {}
+[127.097348] (-) TimerEvent: {}
+[127.199268] (-) TimerEvent: {}
+[127.300421] (-) TimerEvent: {}
+[127.401699] (-) TimerEvent: {}
+[127.502728] (-) TimerEvent: {}
+[127.604113] (-) TimerEvent: {}
+[127.705728] (-) TimerEvent: {}
+[127.806983] (-) TimerEvent: {}
+[127.913968] (-) TimerEvent: {}
+[128.014896] (-) TimerEvent: {}
+[128.116431] (-) TimerEvent: {}
+[128.217881] (-) TimerEvent: {}
+[128.319609] (-) TimerEvent: {}
+[128.421549] (-) TimerEvent: {}
+[128.524508] (-) TimerEvent: {}
+[128.626122] (-) TimerEvent: {}
+[128.727266] (-) TimerEvent: {}
+[128.828895] (-) TimerEvent: {}
+[128.930753] (-) TimerEvent: {}
+[129.032467] (-) TimerEvent: {}
+[129.135783] (-) TimerEvent: {}
+[129.238189] (-) TimerEvent: {}
+[129.339221] (-) TimerEvent: {}
+[129.440033] (-) TimerEvent: {}
+[129.540859] (-) TimerEvent: {}
+[129.641624] (-) TimerEvent: {}
+[129.742419] (-) TimerEvent: {}
+[129.843349] (-) TimerEvent: {}
+[129.945070] (-) TimerEvent: {}
+[130.046661] (-) TimerEvent: {}
+[130.147523] (-) TimerEvent: {}
+[130.248395] (-) TimerEvent: {}
+[130.349925] (-) TimerEvent: {}
+[130.668751] (-) TimerEvent: {}
+[130.769546] (-) TimerEvent: {}
+[130.870458] (-) TimerEvent: {}
+[130.971276] (-) TimerEvent: {}
+[131.072085] (-) TimerEvent: {}
+[131.172845] (-) TimerEvent: {}
+[131.273696] (-) TimerEvent: {}
+[131.374540] (-) TimerEvent: {}
+[131.475423] (-) TimerEvent: {}
+[131.576318] (-) TimerEvent: {}
+[131.677244] (-) TimerEvent: {}
+[131.778020] (-) TimerEvent: {}
+[131.878825] (-) TimerEvent: {}
+[131.979752] (-) TimerEvent: {}
+[132.080885] (-) TimerEvent: {}
+[132.181917] (-) TimerEvent: {}
+[132.286570] (-) TimerEvent: {}
+[132.387647] (-) TimerEvent: {}
+[132.489509] (-) TimerEvent: {}
+[132.592938] (-) TimerEvent: {}
+[132.693930] (-) TimerEvent: {}
+[132.794800] (-) TimerEvent: {}
+[132.896376] (-) TimerEvent: {}
+[132.997403] (-) TimerEvent: {}
+[133.098639] (-) TimerEvent: {}
+[133.199450] (-) TimerEvent: {}
+[133.300273] (-) TimerEvent: {}
+[133.401164] (-) TimerEvent: {}
+[133.502406] (-) TimerEvent: {}
+[133.603205] (-) TimerEvent: {}
+[133.704091] (-) TimerEvent: {}
+[133.805561] (-) TimerEvent: {}
+[133.906713] (-) TimerEvent: {}
+[134.008254] (-) TimerEvent: {}
+[134.108938] (-) TimerEvent: {}
+[134.209918] (-) TimerEvent: {}
+[134.311055] (-) TimerEvent: {}
+[134.412889] (-) TimerEvent: {}
+[134.514260] (-) TimerEvent: {}
+[134.615249] (-) TimerEvent: {}
+[134.716937] (-) TimerEvent: {}
+[134.818145] (-) TimerEvent: {}
+[134.919456] (-) TimerEvent: {}
+[135.020345] (-) TimerEvent: {}
+[135.121394] (-) TimerEvent: {}
+[135.222233] (-) TimerEvent: {}
+[135.323241] (-) TimerEvent: {}
+[135.425315] (-) TimerEvent: {}
+[135.526368] (-) TimerEvent: {}
+[135.627555] (-) TimerEvent: {}
+[135.731828] (-) TimerEvent: {}
+[135.832923] (-) TimerEvent: {}
+[135.934812] (-) TimerEvent: {}
+[136.035566] (-) TimerEvent: {}
+[136.136500] (-) TimerEvent: {}
+[136.237542] (-) TimerEvent: {}
+[136.338338] (-) TimerEvent: {}
+[136.439428] (-) TimerEvent: {}
+[138.164493] (-) TimerEvent: {}
+[150.090663] (-) TimerEvent: {}
+[156.967830] (-) TimerEvent: {}
+[157.068890] (-) TimerEvent: {}
+[157.169904] (-) TimerEvent: {}
+[157.270762] (-) TimerEvent: {}
+[157.371973] (-) TimerEvent: {}
+[157.473112] (-) TimerEvent: {}
+[157.574772] (-) TimerEvent: {}
+[157.676382] (-) TimerEvent: {}
+[157.778327] (-) TimerEvent: {}
+[157.879078] (-) TimerEvent: {}
+[157.979905] (-) TimerEvent: {}
+[158.080934] (-) TimerEvent: {}
+[158.181713] (-) TimerEvent: {}
+[158.282608] (-) TimerEvent: {}
+[158.383437] (-) TimerEvent: {}
+[158.484933] (-) TimerEvent: {}
+[158.585787] (-) TimerEvent: {}
+[158.686785] (-) TimerEvent: {}
+[158.788523] (-) TimerEvent: {}
+[158.890087] (-) TimerEvent: {}
+[158.990874] (-) TimerEvent: {}
+[159.091762] (-) TimerEvent: {}
+[159.192905] (-) TimerEvent: {}
+[159.293933] (-) TimerEvent: {}
+[159.395748] (-) TimerEvent: {}
+[159.496873] (-) TimerEvent: {}
+[159.598218] (-) TimerEvent: {}
+[159.699297] (-) TimerEvent: {}
+[159.800079] (-) TimerEvent: {}
+[159.900947] (-) TimerEvent: {}
+[160.001904] (-) TimerEvent: {}
+[160.102826] (-) TimerEvent: {}
+[160.203619] (-) TimerEvent: {}
+[160.304549] (-) TimerEvent: {}
+[160.405310] (-) TimerEvent: {}
+[160.506211] (-) TimerEvent: {}
+[160.608007] (-) TimerEvent: {}
+[160.708767] (-) TimerEvent: {}
+[160.809533] (-) TimerEvent: {}
+[160.910410] (-) TimerEvent: {}
+[161.011950] (-) TimerEvent: {}
+[161.113923] (-) TimerEvent: {}
+[161.214683] (-) TimerEvent: {}
+[161.315521] (-) TimerEvent: {}
+[161.416941] (-) TimerEvent: {}
+[161.518946] (-) TimerEvent: {}
+[161.621230] (-) TimerEvent: {}
+[161.722293] (-) TimerEvent: {}
+[161.823210] (-) TimerEvent: {}
+[161.924152] (-) TimerEvent: {}
+[162.025941] (-) TimerEvent: {}
+[162.128206] (-) TimerEvent: {}
+[162.230583] (-) TimerEvent: {}
+[162.331421] (-) TimerEvent: {}
+[162.432748] (-) TimerEvent: {}
+[162.534146] (-) TimerEvent: {}
+[162.635206] (-) TimerEvent: {}
+[162.736292] (-) TimerEvent: {}
+[162.838466] (-) TimerEvent: {}
+[162.940398] (-) TimerEvent: {}
+[163.041867] (-) TimerEvent: {}
+[163.143567] (-) TimerEvent: {}
+[163.244392] (-) TimerEvent: {}
+[163.345315] (-) TimerEvent: {}
+[163.446284] (-) TimerEvent: {}
+[163.547723] (-) TimerEvent: {}
+[163.648509] (-) TimerEvent: {}
+[163.749363] (-) TimerEvent: {}
+[163.850240] (-) TimerEvent: {}
+[163.951579] (-) TimerEvent: {}
+[164.054897] (-) TimerEvent: {}
+[164.155839] (-) TimerEvent: {}
+[164.257055] (-) TimerEvent: {}
+[164.358871] (-) TimerEvent: {}
+[164.459608] (-) TimerEvent: {}
+[164.560538] (-) TimerEvent: {}
+[164.661316] (-) TimerEvent: {}
+[164.762097] (-) TimerEvent: {}
+[164.867935] (-) TimerEvent: {}
+[164.968677] (-) TimerEvent: {}
+[165.069487] (-) TimerEvent: {}
+[165.170964] (-) TimerEvent: {}
+[165.272948] (-) TimerEvent: {}
+[165.373882] (-) TimerEvent: {}
+[165.475764] (-) TimerEvent: {}
+[165.576590] (-) TimerEvent: {}
+[165.677934] (-) TimerEvent: {}
+[165.778717] (-) TimerEvent: {}
+[165.879509] (-) TimerEvent: {}
+[165.980349] (-) TimerEvent: {}
+[166.092168] (-) TimerEvent: {}
+[166.192955] (-) TimerEvent: {}
+[166.293797] (-) TimerEvent: {}
+[166.394791] (-) TimerEvent: {}
+[166.495786] (-) TimerEvent: {}
+[166.596568] (-) TimerEvent: {}
+[166.697398] (-) TimerEvent: {}
+[166.799114] (-) TimerEvent: {}
+[166.900326] (-) TimerEvent: {}
+[167.001708] (-) TimerEvent: {}
+[167.103626] (-) TimerEvent: {}
+[167.204898] (-) TimerEvent: {}
+[167.305667] (-) TimerEvent: {}
+[167.406463] (-) TimerEvent: {}
+[167.507251] (-) TimerEvent: {}
+[167.608723] (-) TimerEvent: {}
+[167.709605] (-) TimerEvent: {}
+[167.811227] (-) TimerEvent: {}
+[167.912445] (-) TimerEvent: {}
+[168.013798] (-) TimerEvent: {}
+[168.114557] (-) TimerEvent: {}
+[168.216029] (-) TimerEvent: {}
+[168.317954] (-) TimerEvent: {}
+[168.418770] (-) TimerEvent: {}
+[168.519907] (-) TimerEvent: {}
+[168.621038] (-) TimerEvent: {}
+[168.721932] (-) TimerEvent: {}
+[168.823000] (-) TimerEvent: {}
+[168.924165] (-) TimerEvent: {}
+[169.026926] (-) TimerEvent: {}
+[169.129997] (-) TimerEvent: {}
+[169.231255] (-) TimerEvent: {}
+[169.332113] (-) TimerEvent: {}
+[169.433054] (-) TimerEvent: {}
+[169.534117] (-) TimerEvent: {}
+[169.635334] (-) TimerEvent: {}
+[169.737659] (-) TimerEvent: {}
+[169.840419] (-) TimerEvent: {}
+[169.941695] (-) TimerEvent: {}
+[170.043950] (-) TimerEvent: {}
+[170.145745] (-) TimerEvent: {}
+[170.247980] (-) TimerEvent: {}
+[170.349662] (-) TimerEvent: {}
+[170.451128] (-) TimerEvent: {}
+[170.552967] (-) TimerEvent: {}
+[170.653876] (-) TimerEvent: {}
+[170.755372] (-) TimerEvent: {}
+[170.857920] (-) TimerEvent: {}
+[170.959793] (-) TimerEvent: {}
+[171.060870] (-) TimerEvent: {}
+[171.162508] (-) TimerEvent: {}
+[171.264734] (-) TimerEvent: {}
+[171.366745] (-) TimerEvent: {}
+[171.468971] (-) TimerEvent: {}
+[171.571243] (-) TimerEvent: {}
+[171.672518] (-) TimerEvent: {}
+[171.773445] (-) TimerEvent: {}
+[171.874299] (-) TimerEvent: {}
+[171.975997] (-) TimerEvent: {}
+[172.080957] (-) TimerEvent: {}
+[172.182299] (-) TimerEvent: {}
+[172.284131] (-) TimerEvent: {}
+[172.385772] (-) TimerEvent: {}
+[172.487467] (-) TimerEvent: {}
+[172.589053] (-) TimerEvent: {}
+[172.690989] (-) TimerEvent: {}
+[172.791808] (-) TimerEvent: {}
+[172.892622] (-) TimerEvent: {}
+[172.993879] (-) TimerEvent: {}
+[173.096637] (-) TimerEvent: {}
+[173.200555] (-) TimerEvent: {}
+[173.303446] (-) TimerEvent: {}
+[173.404504] (-) TimerEvent: {}
+[173.505310] (-) TimerEvent: {}
+[173.606242] (-) TimerEvent: {}
+[173.708366] (-) TimerEvent: {}
+[173.810486] (-) TimerEvent: {}
+[173.911820] (-) TimerEvent: {}
+[174.013227] (-) TimerEvent: {}
+[174.114207] (-) TimerEvent: {}
+[174.217074] (-) TimerEvent: {}
+[174.318217] (-) TimerEvent: {}
+[174.421318] (-) TimerEvent: {}
+[174.523292] (-) TimerEvent: {}
+[174.624402] (-) TimerEvent: {}
+[174.725718] (-) TimerEvent: {}
+[174.826931] (-) TimerEvent: {}
+[174.927840] (-) TimerEvent: {}
+[175.028993] (-) TimerEvent: {}
+[175.130114] (-) TimerEvent: {}
+[175.231056] (-) TimerEvent: {}
+[175.332609] (-) TimerEvent: {}
+[175.433357] (-) TimerEvent: {}
+[175.535060] (-) TimerEvent: {}
+[175.637167] (-) TimerEvent: {}
+[175.739052] (-) TimerEvent: {}
+[175.839896] (-) TimerEvent: {}
+[175.941106] (-) TimerEvent: {}
+[176.042472] (-) TimerEvent: {}
+[176.143724] (-) TimerEvent: {}
+[176.244673] (-) TimerEvent: {}
+[176.345607] (-) TimerEvent: {}
+[176.447908] (-) TimerEvent: {}
+[176.549738] (-) TimerEvent: {}
+[176.650582] (-) TimerEvent: {}
+[176.751339] (-) TimerEvent: {}
+[176.853423] (-) TimerEvent: {}
+[176.956280] (-) TimerEvent: {}
+[177.057420] (-) TimerEvent: {}
+[177.158220] (-) TimerEvent: {}
+[177.259289] (-) TimerEvent: {}
+[177.360327] (-) TimerEvent: {}
+[177.461623] (-) TimerEvent: {}
+[177.562496] (-) TimerEvent: {}
+[177.664566] (-) TimerEvent: {}
+[177.765420] (-) TimerEvent: {}
+[177.866766] (-) TimerEvent: {}
+[177.968211] (-) TimerEvent: {}
+[178.069304] (-) TimerEvent: {}
+[178.170399] (-) TimerEvent: {}
+[178.422542] (-) TimerEvent: {}
+[178.532438] (-) TimerEvent: {}
+[178.633344] (-) TimerEvent: {}
+[178.734374] (-) TimerEvent: {}
+[178.835282] (-) TimerEvent: {}
+[178.936214] (-) TimerEvent: {}
+[179.037130] (-) TimerEvent: {}
+[179.137910] (-) TimerEvent: {}
+[179.238792] (-) TimerEvent: {}
+[179.339565] (-) TimerEvent: {}
+[179.440949] (-) TimerEvent: {}
+[179.542144] (-) TimerEvent: {}
+[179.644194] (-) TimerEvent: {}
+[179.745036] (-) TimerEvent: {}
+[179.938831] (-) TimerEvent: {}
+[180.041595] (-) TimerEvent: {}
+[180.144703] (-) TimerEvent: {}
+[180.247497] (-) TimerEvent: {}
+[180.764401] (-) TimerEvent: {}
+[181.650836] (-) TimerEvent: {}
+[181.755898] (-) TimerEvent: {}
+[181.856965] (-) TimerEvent: {}
+[181.957748] (-) TimerEvent: {}
+[182.058581] (-) TimerEvent: {}
+[182.160308] (-) TimerEvent: {}
+[182.262196] (-) TimerEvent: {}
+[182.363580] (-) TimerEvent: {}
+[182.464417] (-) TimerEvent: {}
+[182.565211] (-) TimerEvent: {}
+[182.666099] (-) TimerEvent: {}
+[182.766848] (-) TimerEvent: {}
+[182.868110] (-) TimerEvent: {}
+[182.968857] (-) TimerEvent: {}
+[183.069713] (-) TimerEvent: {}
+[183.170587] (-) TimerEvent: {}
+[183.271460] (-) TimerEvent: {}
+[183.372297] (-) TimerEvent: {}
+[183.473045] (-) TimerEvent: {}
+[183.573809] (-) TimerEvent: {}
+[183.674556] (-) TimerEvent: {}
+[183.775372] (-) TimerEvent: {}
+[183.876196] (-) TimerEvent: {}
+[183.977010] (-) TimerEvent: {}
+[184.077780] (-) TimerEvent: {}
+[184.204902] (-) TimerEvent: {}
+[184.305716] (-) TimerEvent: {}
+[184.406554] (-) TimerEvent: {}
+[184.507475] (-) TimerEvent: {}
+[184.608552] (-) TimerEvent: {}
+[184.709345] (-) TimerEvent: {}
+[184.810176] (-) TimerEvent: {}
+[184.911037] (-) TimerEvent: {}
+[185.012713] (-) TimerEvent: {}
+[185.113726] (-) TimerEvent: {}
+[185.215137] (-) TimerEvent: {}
+[185.316558] (-) TimerEvent: {}
+[185.417609] (-) TimerEvent: {}
+[185.519109] (-) TimerEvent: {}
+[185.621302] (-) TimerEvent: {}
+[185.722138] (-) TimerEvent: {}
+[185.769962] (dynamixel_sdk_examples) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable read_write_node\x1b[0m\n'}
+[185.836264] (-) TimerEvent: {}
+[185.937527] (-) TimerEvent: {}
+[186.039253] (-) TimerEvent: {}
+[186.141395] (-) TimerEvent: {}
+[186.243290] (-) TimerEvent: {}
+[186.344211] (-) TimerEvent: {}
+[186.445013] (-) TimerEvent: {}
+[186.547837] (-) TimerEvent: {}
+[186.650100] (-) TimerEvent: {}
+[186.751369] (-) TimerEvent: {}
+[186.852296] (-) TimerEvent: {}
+[186.953118] (-) TimerEvent: {}
+[187.054485] (-) TimerEvent: {}
+[187.155827] (-) TimerEvent: {}
+[187.256700] (-) TimerEvent: {}
+[187.358215] (-) TimerEvent: {}
+[187.459032] (-) TimerEvent: {}
+[187.559986] (-) TimerEvent: {}
+[187.660789] (-) TimerEvent: {}
+[187.762746] (-) TimerEvent: {}
+[187.863569] (-) TimerEvent: {}
+[187.874428] (dynamixel_sdk_examples) StdoutLine: {'line': b'[100%] Built target read_write_node\n'}
+[187.960892] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[187.978309] (-) TimerEvent: {}
+[188.079554] (-) TimerEvent: {}
+[188.180399] (-) TimerEvent: {}
+[188.281180] (-) TimerEvent: {}
+[188.381955] (-) TimerEvent: {}
+[188.482699] (-) TimerEvent: {}
+[188.561601] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'install'}
+[188.563203] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'], 'cwd': '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('PYTHONIOENCODING', 'utf-8'), ('JETSON_MODEL_NAME', 'JETSON_NANO'), ('HOSTNAME', 'dario-nano'), ('ROS_PACKAGE_PATH', '/ros_deep_learning/install/ros_deep_learning/share'), ('LD_LIBRARY_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('SHLVL', '1'), ('OLDPWD', '/'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/ros2access/kaya_ws/install:/ros_deep_learning/install:/opt/ros/foxy/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/ros_deep_learning/install/ros_deep_learning/lib/aarch64-linux-gnu/pkgconfig:/ros_deep_learning/install/ros_deep_learning/lib/pkgconfig:/opt/ros/foxy/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/install/lib/pkgconfig'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/install/bin:/usr/local/cuda/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/foxy'), ('AMENT_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples'), ('PYTHONPATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:/opt/ros/foxy/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:/home/ros2access/kaya_ws/install/dynamixel_sdk_examples:/ros_deep_learning/install/ros_deep_learning:/opt/ros/foxy/install')]), 'shell': False}
+[188.582968] (-) TimerEvent: {}
+[188.683825] (-) TimerEvent: {}
+[188.787424] (-) TimerEvent: {}
+[188.788951] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[188.792770] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[188.797125] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node\n'}
+[188.803268] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples\n'}
+[188.806678] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples\n'}
+[188.852187] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh\n'}
+[188.857453] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.dsv\n'}
+[188.859330] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.sh\n'}
+[188.861714] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.dsv\n'}
+[188.865911] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.bash\n'}
+[188.867924] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.sh\n'}
+[188.874276] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.zsh\n'}
+[188.874983] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.dsv\n'}
+[188.875782] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv\n'}
+[188.887631] (-) TimerEvent: {}
+[188.895877] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/packages/dynamixel_sdk_examples\n'}
+[188.897500] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig.cmake\n'}
+[188.899087] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig-version.cmake\n'}
+[188.906136] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.xml\n'}
+[188.943803] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[188.992926] (-) TimerEvent: {}
+[189.109070] (-) TimerEvent: {}
+[189.210277] (-) TimerEvent: {}
+[189.311999] (-) TimerEvent: {}
+[189.412790] (-) TimerEvent: {}
+[189.518699] (-) TimerEvent: {}
+[189.630747] (-) TimerEvent: {}
+[189.708890] (dynamixel_sdk_examples) JobEnded: {'identifier': 'dynamixel_sdk_examples', 'rc': 0}
+[189.723079] (-) EventReactorShutdown: {}

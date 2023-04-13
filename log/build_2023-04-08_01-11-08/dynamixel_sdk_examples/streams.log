@@ -1,0 +1,74 @@
+[0.145s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2access/kaya_ws/install/dynamixel_sdk_examples
+[0.476s] -- The C compiler identification is GNU 7.5.0
+[0.682s] -- The CXX compiler identification is GNU 7.5.0
+[0.720s] -- Detecting C compiler ABI info
+[0.921s] -- Detecting C compiler ABI info - done
+[0.969s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.970s] -- Detecting C compile features
+[0.972s] -- Detecting C compile features - done
+[0.988s] -- Detecting CXX compiler ABI info
+[1.221s] -- Detecting CXX compiler ABI info - done
+[1.270s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.271s] -- Detecting CXX compile features
+[1.274s] -- Detecting CXX compile features - done
+[1.290s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/install/share/ament_cmake/cmake)
+[1.432s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[1.433s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.699s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.835s] -- Found dynamixel_sdk: 3.7.40 (/home/ros2access/kaya_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[2.843s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[2.994s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.036s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/install/share/rosidl_adapter/cmake)
+[3.370s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1")  
+[3.486s] -- Found FastRTPS: /opt/ros/foxy/install/include  
+[3.879s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.140s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/install/share/rclcpp/cmake)
+[4.410s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/install/share/rmw_implementation_cmake/cmake)
+[4.420s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[4.426s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.647s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[4.648s] -- Looking for pthread_create in pthreads
+[4.829s] -- Looking for pthread_create in pthreads - not found
+[4.830s] -- Looking for pthread_create in pthread
+[5.036s] -- Looking for pthread_create in pthread - found
+[5.041s] -- Found Threads: TRUE  
+[5.827s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/install/share/ament_lint_auto/cmake)
+[6.460s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.466s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.467s] -- Configured cppcheck include dirs: /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include
+[6.468s] -- Configured cppcheck exclude dirs and/or files: 
+[6.473s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[6.473s] -- Configured cpplint exclude dirs and/or files: 
+[6.477s] -- Added test 'lint_cmake' to check CMake code style
+[6.484s] -- Added test 'uncrustify' to check C / C++ code style
+[6.485s] -- Configured uncrustify additional arguments: 
+[6.487s] -- Added test 'xmllint' to check XML markup files
+[6.496s] -- Configuring done (6.2s)
+[6.545s] -- Generating done (0.0s)
+[6.553s] -- Build files have been written to: /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
+[6.613s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples' returned '0': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2access/kaya_ws/install/dynamixel_sdk_examples
+[6.616s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[6.850s] [ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[28.209s] [100%] [32m[1mLinking CXX executable read_write_node[0m
+[29.382s] [100%] Built target read_write_node
+[29.421s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples' returned '0': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/ros2access/kaya_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[29.685s] Invoking command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
+[29.857s] -- Install configuration: ""
+[29.859s] -- Execute custom install script
+[29.860s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node
+[29.870s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples
+[29.879s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples
+[29.889s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh
+[29.898s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.dsv
+[29.907s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.sh
+[29.917s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.dsv
+[29.926s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.bash
+[29.935s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.sh
+[29.944s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.zsh
+[29.954s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.dsv
+[29.963s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv
+[29.972s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/packages/dynamixel_sdk_examples
+[29.982s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig.cmake
+[29.991s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig-version.cmake
+[30.001s] -- Symlinking: /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.xml
+[30.052s] Invoked command in '/home/ros2access/kaya_ws/build/dynamixel_sdk_examples' returned '0': AMENT_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces:/home/ros2access/kaya_ws/install/dynamixel_sdk:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/ros2access/kaya_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/install/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/install/lib:/usr/local/cuda/lib64:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
