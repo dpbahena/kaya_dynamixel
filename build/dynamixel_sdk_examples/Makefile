@@ -210,6 +210,43 @@ read_write_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/build
 .PHONY : read_write_node/fast
 
+#=============================================================================
+# Target rules for targets named my_read_write
+
+# Build rule for target.
+my_read_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_read_write
+.PHONY : my_read_write
+
+# fast build rule for target.
+my_read_write/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/build
+.PHONY : my_read_write/fast
+
+src/my_read_write.o: src/my_read_write.cpp.o
+.PHONY : src/my_read_write.o
+
+# target to build an object file
+src/my_read_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/src/my_read_write.cpp.o
+.PHONY : src/my_read_write.cpp.o
+
+src/my_read_write.i: src/my_read_write.cpp.i
+.PHONY : src/my_read_write.i
+
+# target to preprocess a source file
+src/my_read_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/src/my_read_write.cpp.i
+.PHONY : src/my_read_write.cpp.i
+
+src/my_read_write.s: src/my_read_write.cpp.s
+.PHONY : src/my_read_write.s
+
+# target to generate assembly for a file
+src/my_read_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/src/my_read_write.cpp.s
+.PHONY : src/my_read_write.cpp.s
+
 src/read_write_node.o: src/read_write_node.cpp.o
 .PHONY : src/read_write_node.o
 
@@ -249,7 +286,11 @@ help:
 	@echo "... test"
 	@echo "... dynamixel_sdk_examples_uninstall"
 	@echo "... uninstall"
+	@echo "... my_read_write"
 	@echo "... read_write_node"
+	@echo "... src/my_read_write.o"
+	@echo "... src/my_read_write.i"
+	@echo "... src/my_read_write.s"
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"

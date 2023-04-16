@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/read_write_node" "TARGETS" "read_write_node" "DESTINATION" "lib/dynamixel_sdk_examples")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/read_write_node" "/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/my_read_write" "TARGETS" "read_write_node" "my_read_write" "DESTINATION" "lib/dynamixel_sdk_examples")

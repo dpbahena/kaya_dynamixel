@@ -4,5 +4,11 @@
   "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include -I/home/ros2access/kaya_ws/install/dynamixel_sdk/include -isystem /opt/ros/foxy/install/include -isystem /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o -c /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp",
   "file": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp",
   "output": "CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o"
+},
+{
+  "directory": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include -I/home/ros2access/kaya_ws/install/dynamixel_sdk/include -isystem /opt/ros/foxy/install/include -isystem /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/my_read_write.dir/src/my_read_write.cpp.o -c /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/my_read_write.cpp",
+  "file": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/my_read_write.cpp",
+  "output": "CMakeFiles/my_read_write.dir/src/my_read_write.cpp.o"
 }
 ]

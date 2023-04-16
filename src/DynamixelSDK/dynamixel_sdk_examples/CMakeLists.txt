@@ -16,11 +16,11 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 set(dynamixel /home/ros2access/kaya_ws/install)
-set(custom_intfaces /home/ros2access/kaya_ws/install())
+set(custom_interfaces /home/ros2access/kaya_ws/install())
 # Find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(dynamixel_sdk REQUIRED PATHS ${dynamixel})
-find_package(dynamixel_sdk_custom_interfaces REQUIRED PATHS ${custom_intfaces})
+find_package(dynamixel_sdk_custom_interfaces REQUIRED PATHS ${custom_interfaces})
 find_package(rclcpp REQUIRED)
 
 include_directories(include)
@@ -34,9 +34,13 @@ ament_target_dependencies(read_write_node
   rclcpp
 )
 
+add_executable(my_read_write src/my_read_write.cpp)
+ament_target_dependencies(my_read_write dynamixel_sdk dynamixel_sdk_custom_interfaces rclcpp)
+
 # Install
 install(TARGETS
   read_write_node
+  my_read_write
   DESTINATION lib/${PROJECT_NAME}
 )
 
