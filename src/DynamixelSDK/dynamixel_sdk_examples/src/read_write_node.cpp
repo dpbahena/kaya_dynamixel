@@ -43,6 +43,7 @@
 #define ADDR_TORQUE_ENABLE 24
 #define ADDR_GOAL_POSITION 30
 #define ADDR_PRESENT_POSITION 36
+#define ADDR_CCW_ANGLE_LIMIT   8
 
 // Protocol version
 #define PROTOCOL_VERSION 1.0  // Default Protocol version of DYNAMIXEL AX & MX.
@@ -95,10 +96,10 @@ ReadWriteNode::ReadWriteNode()
       );
 
       if (dxl_comm_result != COMM_SUCCESS) {
-        RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));
+        RCLCPP_INFO(this->get_logger(), " ho ho %s", packetHandler->getTxRxResult(dxl_comm_result));
         RCLCPP_INFO(this->get_logger(), "Protocol %0.1f", packetHandler->getProtocolVersion());
       } else if (dxl_error != 0) {
-        RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
+        RCLCPP_INFO(this->get_logger(), "hu hu %s", packetHandler->getRxPacketError(dxl_error));
       } else {
         RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->id, msg->position);
       }
@@ -139,19 +140,19 @@ ReadWriteNode::~ReadWriteNode()
 
 void setupDynamixel(uint8_t dxl_id)
 {
-  // Use Position Control Mode
-   dxl_comm_result = packetHandler->write1ByteTxRx(
+  // Use JOINT Mode
+   dxl_comm_result = packetHandler->write2ByteTxRx(
     portHandler,
     dxl_id,
-    ADDR_TORQUE_ENABLE,
-    1,
+    ADDR_CCW_ANGLE_LIMIT,
+    (uint16_t)4095,
     &dxl_error
   );
 
   if (dxl_comm_result != COMM_SUCCESS) {
-    RCLCPP_ERROR(rclcpp::get_logger("read_write_node"), "Failed to set Position Control Mode.");
+    RCLCPP_ERROR(rclcpp::get_logger("read_write_node"), "Failed to set JOINT Mode.");
   } else {
-    RCLCPP_INFO(rclcpp::get_logger("read_write_node"), "Succeeded to set Position Control Mode.");
+    RCLCPP_INFO(rclcpp::get_logger("read_write_node"), "Succeeded to set JOINT Mode.");
   }
 
   // Enable Torque of DYNAMIXEL

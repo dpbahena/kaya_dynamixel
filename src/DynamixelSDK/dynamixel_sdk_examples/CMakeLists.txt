@@ -37,10 +37,16 @@ ament_target_dependencies(read_write_node
 add_executable(my_read_write src/my_read_write.cpp)
 ament_target_dependencies(my_read_write dynamixel_sdk dynamixel_sdk_custom_interfaces rclcpp)
 
+add_executable(motorcontroller src/motorcontroller.cpp)
+ament_target_dependencies(motorcontroller dynamixel_sdk rclcpp)
+
+
+
 # Install
 install(TARGETS
   read_write_node
   my_read_write
+  motorcontroller
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -45,7 +45,16 @@ private:
 
     void setUpDynamixelAsWheel(uint8_t dxl_id);
     void testWheel(uint8_t dxl_id);
-    
+    inline int checkErrors(int result){
+        if(result != COMM_SUCCESS){
+            RCLCPP_ERROR(this->get_logger()," He HE HECCW angle limit error %s", packetHandler->getTxRxResult(result));
+            assert(result == COMM_SUCCESS);
+        }else if(dxl_error != 0){
+            RCLCPP_ERROR(this->get_logger()," horrores %s", packetHandler->getRxPacketError(dxl_error));
+            assert(dxl_error == 0);
+        }
+        return result;
+    }
     
 
     
@@ -55,6 +64,7 @@ private:
 };
 
 DynamixelWheel::DynamixelWheel(int speed, int accel) : Node("wheel_node"){
+    
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
     this->speed = speed;
@@ -81,76 +91,91 @@ DynamixelWheel::DynamixelWheel(int speed, int accel) : Node("wheel_node"){
 }
 
 DynamixelWheel::~DynamixelWheel(){
-    /* Set torque to 0 */
+    
+    /* Exiting: set torque back to 0 */
 
-    dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 0, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," Failed to enable torque! : %S", packetHandler->getRxPacketError(dxl_error));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 0, &dxl_error));
+   
 }
 
 void DynamixelWheel::setUpDynamixelAsWheel(uint8_t dxl_id){
     
-    /* Set torque to 0 */
-    dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 1, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," Failed to enable torque! : %S", packetHandler->getRxPacketError(dxl_error));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
     
+    /* Disable torque */
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 0, &dxl_error));
     /* Set wheel mode */
-    dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_CCW_ANGLE_LIMIT, (uint16_t)0, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," CCW angle limit error %s", packetHandler->getTxRxResult(dxl_comm_result));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
+    checkErrors(packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_CCW_ANGLE_LIMIT, (uint16_t)0, &dxl_error));
+    /* Enable torque */
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 1, &dxl_error));
 
-    /* Set torque */
-    dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_TORQUE_ENABLE, 1, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," Failed to enable torque! : %S", packetHandler->getRxPacketError(dxl_error));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
+    /* Set wheel mode */
+    // /* Set torque to 0 */
+    // dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 1, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," Failed to enable torque! : %S", packetHandler->getRxPacketError(dxl_error));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
+
+    // }
+    
+    // /* Set wheel mode */
+    // dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_CCW_ANGLE_LIMIT, (uint16_t)0, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," CCW angle limit error %s", packetHandler->getTxRxResult(dxl_comm_result));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
+    // }
+
+    // /* Set torque */
+    // dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_TORQUE_ENABLE, 1, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," Failed to enable torque! : %S", packetHandler->getRxPacketError(dxl_error));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
+    // }
 }
 
 
 void DynamixelWheel::testWheel(uint8_t dxl_id){
+
     /* Set acceleration */
-    dxl_comm_result =packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_GOAL_ACCELERATION, (uint8_t)accel, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," Acceleration error %s", packetHandler->getRxPacketError(dxl_error));
-    }
-
-     /* Set wheel speed */
-    dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)speed, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_GOAL_ACCELERATION, (uint8_t)accel, &dxl_error));
+    /* Set wheel speed */
+    checkErrors(packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)speed, &dxl_error));
     std::this_thread::sleep_for(5s);
+    /* Stop the motor */
+    checkErrors(packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)1024, &dxl_error));
+    
+    // /* Set acceleration */
+    // dxl_comm_result =packetHandler->write1ByteTxRx(portHandler, dxl_id, ADDR_GOAL_ACCELERATION, (uint8_t)accel, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," Acceleration error %s", packetHandler->getRxPacketError(dxl_error));
+    // }
 
-    /* stop the motor */
-    dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)1024, &dxl_error);
-    if(dxl_comm_result != COMM_SUCCESS){
-        RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
-        exit(1);
-    }else if(dxl_error != 0){
-        RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
-    }
+    //  /* Set wheel speed */
+    // dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)speed, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
+    // }
+    // std::this_thread::sleep_for(5s);
+
+    // /* stop the motor */
+    // dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, dxl_id, ADDR_MOVING_SPEED, (uint16_t)1024, &dxl_error);
+    // if(dxl_comm_result != COMM_SUCCESS){
+    //     RCLCPP_ERROR(this->get_logger()," moving speed error %s", packetHandler->getTxRxResult(dxl_comm_result));
+    //     exit(1);
+    // }else if(dxl_error != 0){
+    //     RCLCPP_ERROR(this->get_logger()," %s", packetHandler->getRxPacketError(dxl_error));
+    // }
 }
 int main(int argc, char **argv){
 

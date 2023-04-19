@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/ros2access/kaya_ws/build/dynamixel_sdk_examples
 # The main recursive "all" target.
 all: CMakeFiles/read_write_node.dir/all
 all: CMakeFiles/my_read_write.dir/all
+all: CMakeFiles/motorcontroller.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/dynamixel_sdk_examples_uninstall.dir/clean
 clean: CMakeFiles/read_write_node.dir/clean
 clean: CMakeFiles/my_read_write.dir/clean
+clean: CMakeFiles/motorcontroller.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -137,7 +139,7 @@ CMakeFiles/dynamixel_sdk_examples_uninstall.dir/clean:
 CMakeFiles/read_write_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles --progress-num=3,4 "Built target read_write_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles --progress-num=5,6 "Built target read_write_node"
 .PHONY : CMakeFiles/read_write_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -163,7 +165,7 @@ CMakeFiles/read_write_node.dir/clean:
 CMakeFiles/my_read_write.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles --progress-num=1,2 "Built target my_read_write"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles --progress-num=3,4 "Built target my_read_write"
 .PHONY : CMakeFiles/my_read_write.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,6 +183,32 @@ my_read_write: CMakeFiles/my_read_write.dir/rule
 CMakeFiles/my_read_write.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/clean
 .PHONY : CMakeFiles/my_read_write.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/motorcontroller.dir
+
+# All Build rule for target.
+CMakeFiles/motorcontroller.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles --progress-num=1,2 "Built target motorcontroller"
+.PHONY : CMakeFiles/motorcontroller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/motorcontroller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motorcontroller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros2access/kaya_ws/build/dynamixel_sdk_examples/CMakeFiles 0
+.PHONY : CMakeFiles/motorcontroller.dir/rule
+
+# Convenience name for target.
+motorcontroller: CMakeFiles/motorcontroller.dir/rule
+.PHONY : motorcontroller
+
+# clean rule for target.
+CMakeFiles/motorcontroller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/clean
+.PHONY : CMakeFiles/motorcontroller.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

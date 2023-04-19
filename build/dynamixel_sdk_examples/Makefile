@@ -223,6 +223,43 @@ my_read_write/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_read_write.dir/build.make CMakeFiles/my_read_write.dir/build
 .PHONY : my_read_write/fast
 
+#=============================================================================
+# Target rules for targets named motorcontroller
+
+# Build rule for target.
+motorcontroller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motorcontroller
+.PHONY : motorcontroller
+
+# fast build rule for target.
+motorcontroller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/build
+.PHONY : motorcontroller/fast
+
+src/motorcontroller.o: src/motorcontroller.cpp.o
+.PHONY : src/motorcontroller.o
+
+# target to build an object file
+src/motorcontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o
+.PHONY : src/motorcontroller.cpp.o
+
+src/motorcontroller.i: src/motorcontroller.cpp.i
+.PHONY : src/motorcontroller.i
+
+# target to preprocess a source file
+src/motorcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.i
+.PHONY : src/motorcontroller.cpp.i
+
+src/motorcontroller.s: src/motorcontroller.cpp.s
+.PHONY : src/motorcontroller.s
+
+# target to generate assembly for a file
+src/motorcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.s
+.PHONY : src/motorcontroller.cpp.s
+
 src/my_read_write.o: src/my_read_write.cpp.o
 .PHONY : src/my_read_write.o
 
@@ -286,8 +323,12 @@ help:
 	@echo "... test"
 	@echo "... dynamixel_sdk_examples_uninstall"
 	@echo "... uninstall"
+	@echo "... motorcontroller"
 	@echo "... my_read_write"
 	@echo "... read_write_node"
+	@echo "... src/motorcontroller.o"
+	@echo "... src/motorcontroller.i"
+	@echo "... src/motorcontroller.s"
 	@echo "... src/my_read_write.o"
 	@echo "... src/my_read_write.i"
 	@echo "... src/my_read_write.s"
