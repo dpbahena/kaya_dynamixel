@@ -2,6 +2,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"  // for relative speeds
+#include "std_msgs/msg/bool.hpp"  // for checking motor off/on
 
 // Control table address for AX & MX(1.0)
 #define ADDR_TORQUE_ENABLE      24
@@ -9,8 +10,10 @@
 #define ADDR_PRESENT_POSITION   36
 #define ADDR_CCW_ANGLE_LIMIT     8
 #define ADDR_MOVING_SPEED       32
-#define LEN_MX_MOVING           2
+#define LEN_MX_MOVING            2   // 2 bytes 
+#define LEN_MX_MOVING_STATUS         1   // 1 byte
 #define ADDR_GOAL_ACCELERATION  73
+#define ADDR_MOVING_STATUS      46
 
 // Protocol version
 #define PROTOCOL_VERSION 1.0  // Default Protocol version of DYNAMIXEL AX & MX.
@@ -21,9 +24,15 @@
 #define MOTOR_1     1
 #define MOTOR_2     2
 #define MOTOR_3     3
+#define ON          1
+#define OFF         0
 
 
-
+/* USAGE EXAMPLE - to start motors once 
+*
+*  ros2 topic pub -1 /relative_speeds std_msgs/msg/Float32MultiArray "{data: {0.58, .3, -0.58, 0}}"  
+* 
+*/
 
 
 using std::placeholders::_1;
@@ -40,8 +49,11 @@ private:
     dynamixel::PacketHandler *packetHandler;
     uint8_t dxl_error = 0;
     int dxl_comm_result = COMM_TX_FAIL;
-    bool dxl_addparam_result = false;               // addParam result
+    bool dxl_addparam_result = false;    // addParam result
+    bool motors_status = OFF;
     uint8_t param_speed_value[2];
+
+    int maxTime;  // max number of seconds the motors untir motors on same command will be shutdown.
 
     
 
@@ -49,7 +61,10 @@ private:
 
     /* publishers and subscribers declarations */
     rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr relative_speeds_sub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr motorstatus_pub_;
 
+    /* timers */
+    rclcpp::TimerBase::SharedPtr timer_;
     
 
     void setDxl(uint8_t id);  // set dynamixels M-12 as wheel mode
@@ -57,6 +72,8 @@ private:
     void dxlSetSpeed(uint8_t id, double speed);
     
     void dxlMotorsOn();
+    bool areMotorsOn();
+    void motors_status_callback();
     
 
     /* callback functions */
@@ -87,10 +104,13 @@ int main(int argc, char ** argv){
 }
 
 MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
+
+    this->declare_parameter("maxtime", 3);
+    this->get_parameter("maxtime", maxTime);  // maxTime gets its value fro the parameter "maxtime"
+    
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
-
-    
+   
     
     /* Open Serial Port */
     dxl_comm_result = portHandler->openPort();
@@ -106,6 +126,11 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
     
     /* susbcriber definition */
     relative_speeds_sub_ = this->create_subscription<std_msgs::msg::Float32MultiArray>("relative_speeds", 10, std::bind(&MotorWheelControl::relativeSpeeds_callback, this, _1) );
+
+    /* publisher definition */
+    motorstatus_pub_ = this->create_publisher<std_msgs::msg::Bool>("motor_status", 10);
+    timer_ = this->create_wall_timer(100ms, std::bind(&MotorWheelControl::motors_status_callback, this) );
+
     
     setDxl(BROADCAST_ID); // all motors: wheel mode
     dxlSetAcceleration(BROADCAST_ID);  // all wheels
@@ -113,6 +138,13 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
     
 }
 
+void MotorWheelControl::motors_status_callback(){
+    
+    std_msgs::msg::Bool msg;
+    msg.data = areMotorsOn();
+    motorstatus_pub_->publish(msg);
+        
+}
 
 void MotorWheelControl::dxlMotorsOn(){
 
@@ -209,7 +241,7 @@ void MotorWheelControl::dxlMotorsOn(){
 
     /* Syncwrite moving speed */
 
-    checkErrors( dxl_comm_result = groupSpeedSyncWrite.txPacket() );
+    checkErrors( groupSpeedSyncWrite.txPacket() );
     
 
     // Clear syncwrite parameter storage
@@ -243,7 +275,73 @@ void MotorWheelControl::dxlMotorsOn(){
     
 }
 
+/**
+ * @brief  Checks the status of each motor: ON , OFF
+ * 
+ * @return true 
+ * @return false 
+ */
+bool MotorWheelControl::areMotorsOn(){
 
+    bool dxl_getdata_result = false;
+    bool state_m1, state_m2, state_m3;
+
+    /* Initialize GroupBulkRead Instance */
+    dynamixel::GroupBulkRead groupReadMotorStatus(portHandler, packetHandler);
+
+    /* Add parameter storage for Dynamixel#1 present motor status */
+     dxl_addparam_result = groupReadMotorStatus.addParam(MOTOR_1, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+        if(dxl_addparam_result != true){
+            RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead addparam failed", MOTOR_1);
+            assert(dxl_addparam_result == true);
+        }
+     dxl_addparam_result = groupReadMotorStatus.addParam(MOTOR_2, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+        if(dxl_addparam_result != true){
+            RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead addparam failed", MOTOR_2);
+            assert(dxl_addparam_result == true);
+        }
+     dxl_addparam_result = groupReadMotorStatus.addParam(MOTOR_3, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+        if(dxl_addparam_result != true){
+            RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead addparam failed", MOTOR_3);
+            assert(dxl_addparam_result == true);
+        }
+
+
+    /* Bulkread present position and moving status */
+    checkErrors(groupReadMotorStatus.txRxPacket());
+    checkErrors(groupReadMotorStatus.getError(MOTOR_1, &dxl_error));
+    checkErrors(groupReadMotorStatus.getError(MOTOR_2, &dxl_error));
+    checkErrors(groupReadMotorStatus.getError(MOTOR_3, &dxl_error));
+
+    dxl_getdata_result = groupReadMotorStatus.isAvailable(MOTOR_1, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+    if(dxl_getdata_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead getdata failed", MOTOR_1);
+        assert(dxl_getdata_result == true);
+    }
+    dxl_getdata_result = groupReadMotorStatus.isAvailable(MOTOR_2, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+    if(dxl_getdata_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead getdata failed", MOTOR_2);
+        assert(dxl_getdata_result == true);
+    }
+    dxl_getdata_result = groupReadMotorStatus.isAvailable(MOTOR_3, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+    if(dxl_getdata_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupBulkRead getdata failed", MOTOR_3);
+        assert(dxl_getdata_result == true);
+    }
+    
+    /* Get the moving Status Value */
+    state_m1 = groupReadMotorStatus.getData(MOTOR_1, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+    state_m2 = groupReadMotorStatus.getData(MOTOR_2, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+    state_m3 = groupReadMotorStatus.getData(MOTOR_3, ADDR_MOVING_STATUS, LEN_MX_MOVING_STATUS);
+
+    groupReadMotorStatus.clearParam();
+
+    if(state_m1 || state_m2 || state_m3){
+        return ON;
+    }
+
+    return OFF;
+}
 void MotorWheelControl::relativeSpeeds_callback(const std_msgs::msg::Float32MultiArray::ConstSharedPtr msg){
 
     m1_rs = msg->data[0];  // motor 1
@@ -262,7 +360,7 @@ void MotorWheelControl::setDxl(uint8_t id){
     checkErrors(packetHandler->write2ByteTxRx(portHandler, id, ADDR_CCW_ANGLE_LIMIT, (uint16_t) 0, &dxl_error));  // 0 : no limit
     /* Enable torque */
     checkErrors(packetHandler->write1ByteTxRx(portHandler, id, ADDR_TORQUE_ENABLE, 1, &dxl_error));
-
+    
 }
 
 void MotorWheelControl::dxlSetAcceleration(uint8_t id){
@@ -281,4 +379,7 @@ void MotorWheelControl::dxlSetSpeed(uint8_t id, double speed){
 
 MotorWheelControl::~MotorWheelControl(){
 
+    /* Disable torque */
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 0, &dxl_error)); // all motors
+    
 }
