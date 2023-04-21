@@ -373,11 +373,17 @@ include("/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/ament_cm
 # install(FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
+# install(FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+
 # install(FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 
 # install(FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+
+# install(FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
 # install(FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces" FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")

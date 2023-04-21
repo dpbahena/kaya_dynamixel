@@ -58,26 +58,33 @@ private:
     
 
     float m1_rs, m2_rs, m3_rs;   //holds relative speeds for each motor
+    float s1{},s2{},s3{}; // hold actual speeds
 
     /* publishers and subscribers declarations */
     rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr relative_speeds_sub_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr motorstatus_pub_;
+    
 
     /* timers */
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr timer2_;
+    double start, end; // measure time intervals for length of time motors are working on last command
     
 
     void setDxl(uint8_t id);  // set dynamixels M-12 as wheel mode
     void dxlSetAcceleration(uint8_t id);
     void dxlSetSpeed(uint8_t id, double speed);
     
-    void dxlMotorsOn();
+    void dxlStartMotors();
+    void dxlStopMotors();
     bool areMotorsOn();
-    void motors_status_callback();
+    
     
 
     /* callback functions */
     void relativeSpeeds_callback(const std_msgs::msg::Float32MultiArray::ConstSharedPtr msg);
+    void motors_status_callback();
+    void elapsedTime_callback();
 
 
     /* check for errors during transmissions */
@@ -131,13 +138,18 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
     motorstatus_pub_ = this->create_publisher<std_msgs::msg::Bool>("motor_status", 10);
     timer_ = this->create_wall_timer(100ms, std::bind(&MotorWheelControl::motors_status_callback, this) );
 
-    
+    /* measure elapsed time only when motors are ON */
+    timer2_ = this->create_wall_timer(100ms, [&](){if(motors_status == ON) elapsedTime_callback();});
+
     setDxl(BROADCAST_ID); // all motors: wheel mode
     dxlSetAcceleration(BROADCAST_ID);  // all wheels
 
     
 }
-
+/**
+ * @brief Publish the status of the motors ON/OFF
+ * 
+ */
 void MotorWheelControl::motors_status_callback(){
     
     std_msgs::msg::Bool msg;
@@ -145,8 +157,74 @@ void MotorWheelControl::motors_status_callback(){
     motorstatus_pub_->publish(msg);
         
 }
+/**
+ * @brief Stop all the motors
+ * 
+ */
+void MotorWheelControl::dxlStopMotors(){
+    /* Initialize Group synchronize instant */
+    dynamixel::GroupSyncWrite groupSpeedSyncWrite(portHandler, packetHandler, ADDR_MOVING_SPEED, LEN_MX_MOVING);
 
-void MotorWheelControl::dxlMotorsOn(){
+    /**
+     * (uint16_t)s1 << 10) & 1  checks if the 10th bit is set. If set to 1 then is CW otherwise is CCW
+     *  Value of 0 stops motors CCW
+     *  value of 1024 stops motors CW
+     */
+    if( ((uint16_t)s1 >> 10) & 1){   
+        s1 = 1024; //CW
+    } else{
+        s1 = 0;   // CCW
+    }
+    if( ((uint16_t)s2 >> 10) & 1){
+        s2 = 1024; //CW
+    } else{
+        s2 = 0;   // CCW
+    }
+    if( ((uint16_t)s3 >> 10) & 1){
+        s3 = 1024; //CW
+    } else{
+        s3 = 0;   // CCW
+    }
+
+    param_speed_value[0] = DXL_LOBYTE(s1);
+    param_speed_value[1] = DXL_HIBYTE(s1);
+    dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
+    if(dxl_addparam_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupSyncWrite addparam failed", MOTOR_1);
+        assert(dxl_addparam_result == true);
+    }
+    
+    param_speed_value[0] = DXL_LOBYTE(s2);
+    param_speed_value[1] = DXL_HIBYTE(s2);
+    dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
+    if(dxl_addparam_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupSyncWrite addparam failed", MOTOR_2);
+        assert(dxl_addparam_result == true);
+    }
+    param_speed_value[0] = DXL_LOBYTE(s3);
+    param_speed_value[1] = DXL_HIBYTE(s3);
+    dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
+    if(dxl_addparam_result != true){
+        RCLCPP_ERROR(this->get_logger(),"[ID:%03d] groupSyncWrite addparam failed", MOTOR_3);
+        assert(dxl_addparam_result == true);
+    }
+
+
+     /* Syncwrite moving (stop) speed */
+
+    checkErrors( groupSpeedSyncWrite.txPacket() );
+    
+
+    // Clear syncwrite parameter storage
+    groupSpeedSyncWrite.clearParam();
+    s1 = 0;
+    s2 = 0;
+    s3 = 0;
+
+
+
+}
+void MotorWheelControl::dxlStartMotors(){
 
     /**
      * Wheel Mode It is a moving speed to Goal direction. 0~2047 (0X7FF) can be used, and the unit is about 0.916rpm.
@@ -162,7 +240,7 @@ void MotorWheelControl::dxlMotorsOn(){
      *                         O (rear wheel ID: 2)
     */
    
-    float s1{},s2{},s3{}; // holds speeds 
+     
     /* Initialize Group synchronize instant */
     dynamixel::GroupSyncWrite groupSpeedSyncWrite(portHandler, packetHandler, ADDR_MOVING_SPEED, LEN_MX_MOVING);
     
@@ -239,6 +317,9 @@ void MotorWheelControl::dxlMotorsOn(){
         }
     } 
 
+    /* start timer */
+    start = this->get_clock()->now().seconds();
+
     /* Syncwrite moving speed */
 
     checkErrors( groupSpeedSyncWrite.txPacket() );
@@ -247,6 +328,7 @@ void MotorWheelControl::dxlMotorsOn(){
     // Clear syncwrite parameter storage
     groupSpeedSyncWrite.clearParam();
 
+    motors_status = areMotorsOn();  // check if motors are actually on
 
 
     /* No group synchronization */
@@ -336,7 +418,7 @@ bool MotorWheelControl::areMotorsOn(){
 
     groupReadMotorStatus.clearParam();
 
-    if(state_m1 || state_m2 || state_m3){
+    if(state_m1 || state_m2 || state_m3){  // if either motor is on then the status is ON
         return ON;
     }
 
@@ -344,11 +426,12 @@ bool MotorWheelControl::areMotorsOn(){
 }
 void MotorWheelControl::relativeSpeeds_callback(const std_msgs::msg::Float32MultiArray::ConstSharedPtr msg){
 
-    m1_rs = msg->data[0];  // motor 1
-    m2_rs = msg->data[1];  // motor 2
-    m3_rs = msg->data[2];  // motor 3
-
-    dxlMotorsOn();
+    m1_rs = msg->data.at(0);  // motor 1
+    m2_rs = msg->data.at(1);  // motor 2
+    m3_rs = msg->data.at(2);  // motor 3
+    
+    dxlStartMotors();
+    
 
 }
 
@@ -382,4 +465,14 @@ MotorWheelControl::~MotorWheelControl(){
     /* Disable torque */
     checkErrors(packetHandler->write1ByteTxRx(portHandler, BROADCAST_ID, ADDR_TORQUE_ENABLE, 0, &dxl_error)); // all motors
     
+}
+
+void MotorWheelControl::elapsedTime_callback(){
+    auto checkTime = this->get_clock()->now().seconds();
+    auto timeElapsed = checkTime - start;
+
+    if(timeElapsed >= maxTime){
+        dxlStopMotors();
+        motors_status = areMotorsOn();
+    }
 }

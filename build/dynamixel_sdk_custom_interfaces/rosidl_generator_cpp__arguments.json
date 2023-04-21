@@ -4,6 +4,7 @@
   "template_dir": "/opt/ros/foxy/install/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
     "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetPosition.idl",
+    "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetRelativeSpeed.idl",
     "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces:srv/GetPosition.idl"
   ],
   "ros_interface_dependencies": [
@@ -27,6 +28,7 @@
     "/opt/ros/foxy/install/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/foxy/install/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
     "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl",
+    "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed.idl",
     "/home/ros2access/kaya_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl",
     "/opt/ros/foxy/install/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/foxy/install/share/builtin_interfaces/msg/Time.idl"
