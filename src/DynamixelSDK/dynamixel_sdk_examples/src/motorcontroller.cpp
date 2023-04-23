@@ -1,8 +1,12 @@
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-#include "std_msgs/msg/float32_multi_array.hpp"  // for relative speeds
+#include "dynamixel_sdk_custom_interfaces/msg/set_relative_speed.hpp"  // for relative speeds
 #include "std_msgs/msg/bool.hpp"  // for checking motor off/on
+
+
+
+
 
 // Control table address for AX & MX(1.0)
 #define ADDR_TORQUE_ENABLE      24
@@ -30,8 +34,11 @@
 
 /* USAGE EXAMPLE - to start motors once 
 *
-*  ros2 topic pub -1 /relative_speeds std_msgs/msg/Float32MultiArray "{data: {0.58, .3, -0.58, 0}}"  
+*  ros2 topic pub -1 /relative_speeds dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed "{m1: -0.5, m2: 0.4, m3: .5}"  
 * 
+*  change parameter in command line (to change maxtime wheels running on last command)
+*  
+*  ros2 run dynamixel_sdk_examples motorcontroller --ros-args -p maxtime:=4
 */
 
 
@@ -61,7 +68,7 @@ private:
     float s1{},s2{},s3{}; // hold actual speeds
 
     /* publishers and subscribers declarations */
-    rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr relative_speeds_sub_;
+    rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::SetRelativeSpeed>::SharedPtr relative_speeds_sub_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr motorstatus_pub_;
     
 
@@ -82,7 +89,7 @@ private:
     
 
     /* callback functions */
-    void relativeSpeeds_callback(const std_msgs::msg::Float32MultiArray::ConstSharedPtr msg);
+    void relativeSpeeds_callback(const dynamixel_sdk_custom_interfaces::msg::SetRelativeSpeed::ConstSharedPtr msg);
     void motors_status_callback();
     void elapsedTime_callback();
 
@@ -114,7 +121,9 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
 
     this->declare_parameter("maxtime", 3);
     this->get_parameter("maxtime", maxTime);  // maxTime gets its value fro the parameter "maxtime"
-    
+    //rclcpp::Parameter int_param = this->get_parameter("maxtime");
+    //maxTime = int_param.as_int();
+
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
    
@@ -132,18 +141,19 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
     }
     
     /* susbcriber definition */
-    relative_speeds_sub_ = this->create_subscription<std_msgs::msg::Float32MultiArray>("relative_speeds", 10, std::bind(&MotorWheelControl::relativeSpeeds_callback, this, _1) );
+    relative_speeds_sub_ = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::SetRelativeSpeed>("relative_speeds", 10, std::bind(&MotorWheelControl::relativeSpeeds_callback, this, _1) );
 
     /* publisher definition */
     motorstatus_pub_ = this->create_publisher<std_msgs::msg::Bool>("motor_status", 10);
     timer_ = this->create_wall_timer(100ms, std::bind(&MotorWheelControl::motors_status_callback, this) );
 
     /* measure elapsed time only when motors are ON */
-    timer2_ = this->create_wall_timer(100ms, [&](){if(motors_status == ON) elapsedTime_callback();});
+    timer2_ = this->create_wall_timer(10ms, [&](){if(motors_status == ON) elapsedTime_callback();});
 
     setDxl(BROADCAST_ID); // all motors: wheel mode
     dxlSetAcceleration(BROADCAST_ID);  // all wheels
-
+    
+    
     
 }
 /**
@@ -166,7 +176,7 @@ void MotorWheelControl::dxlStopMotors(){
     dynamixel::GroupSyncWrite groupSpeedSyncWrite(portHandler, packetHandler, ADDR_MOVING_SPEED, LEN_MX_MOVING);
 
     /**
-     * (uint16_t)s1 << 10) & 1  checks if the 10th bit is set. If set to 1 then is CW otherwise is CCW
+     * (uint16_t)s1 >> 10) & 1  checks if the 10th bit is set. If set to 1 then is CW otherwise is CCW
      *  Value of 0 stops motors CCW
      *  value of 1024 stops motors CW
      */
@@ -213,15 +223,21 @@ void MotorWheelControl::dxlStopMotors(){
      /* Syncwrite moving (stop) speed */
 
     checkErrors( groupSpeedSyncWrite.txPacket() );
+    printf("Elapset time %0.3f\n",  this->get_clock()->now().seconds() - start );
+    std::this_thread::sleep_for(2s); // give time for wheels stop moving after stop command issued
+    //motors_status = OFF;    // or you can simple change the status to OFF by uncommenting this line and commenting both the above and below line
+    motors_status = areMotorsOn();
     
 
     // Clear syncwrite parameter storage
     groupSpeedSyncWrite.clearParam();
+    
+    /* reset speeds */
     s1 = 0;
     s2 = 0;
     s3 = 0;
 
-
+    
 
 }
 void MotorWheelControl::dxlStartMotors(){
@@ -424,11 +440,11 @@ bool MotorWheelControl::areMotorsOn(){
 
     return OFF;
 }
-void MotorWheelControl::relativeSpeeds_callback(const std_msgs::msg::Float32MultiArray::ConstSharedPtr msg){
+void MotorWheelControl::relativeSpeeds_callback(const dynamixel_sdk_custom_interfaces::msg::SetRelativeSpeed::ConstSharedPtr msg){
 
-    m1_rs = msg->data.at(0);  // motor 1
-    m2_rs = msg->data.at(1);  // motor 2
-    m3_rs = msg->data.at(2);  // motor 3
+    m1_rs = msg->m1;  // motor 1
+    m2_rs = msg->m2;  // motor 2
+    m3_rs = msg->m3;  // motor 3
     
     dxlStartMotors();
     
@@ -473,6 +489,6 @@ void MotorWheelControl::elapsedTime_callback(){
 
     if(timeElapsed >= maxTime){
         dxlStopMotors();
-        motors_status = areMotorsOn();
+        // motors_status = areMotorsOn();
     }
 }

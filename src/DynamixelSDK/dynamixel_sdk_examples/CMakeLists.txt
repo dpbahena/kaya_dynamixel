@@ -38,7 +38,7 @@ add_executable(my_read_write src/my_read_write.cpp)
 ament_target_dependencies(my_read_write dynamixel_sdk dynamixel_sdk_custom_interfaces rclcpp)
 
 add_executable(motorcontroller src/motorcontroller.cpp)
-ament_target_dependencies(motorcontroller dynamixel_sdk rclcpp)
+ament_target_dependencies(motorcontroller dynamixel_sdk rclcpp dynamixel_sdk_custom_interfaces)
 
 
 

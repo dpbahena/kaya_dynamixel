@@ -185,6 +185,9 @@ CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h \
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h \
+  rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__type_support.h \
+  rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__struct.h \
+  rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__functions.h \
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h \
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h \
   rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h
@@ -193,6 +196,12 @@ CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__
 rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h:
 
 rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h:
+
+rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__functions.h:
+
+rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__struct.h:
+
+rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_relative_speed__type_support.h:
 
 rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h:
 
