@@ -15,9 +15,11 @@
 #define ADDR_CCW_ANGLE_LIMIT     8
 #define ADDR_MOVING_SPEED       32
 #define LEN_MX_MOVING            2   // 2 bytes 
-#define LEN_MX_MOVING_STATUS         1   // 1 byte
+#define LEN_MX_MOVING_STATUS     1   // 1 byte
 #define ADDR_GOAL_ACCELERATION  73
 #define ADDR_MOVING_STATUS      46
+#define ADDR_PRESENT_SPEED      38
+#define LEN_PRESENT_SPEED       2
 
 // Protocol version
 #define PROTOCOL_VERSION 1.0  // Default Protocol version of DYNAMIXEL AX & MX.
@@ -31,6 +33,7 @@
 #define ON          1
 #define OFF         0
 
+//const double velocityFactor = 1023/470;   // 470 rmp with no load
 
 /* USAGE EXAMPLE - to start motors once 
 *
@@ -61,6 +64,12 @@ private:
     uint8_t param_speed_value[2];
 
     int maxTime;  // max number of seconds the motors untir motors on same command will be shutdown.
+    
+    /**
+     * @brief To calculate the velocity factor for the MX-12 Dynamixel motor, divide the maximum Dynamixel goal velocity value (1023) by the maximum RPM of the motors
+     *          constant used to convert the calculated wheel velocities to the appropriate unit or scale expected by the Dynamixel motors.
+     */
+    float velocityFactor; 
 
     
 
@@ -121,6 +130,9 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
 
     this->declare_parameter("maxtime", 3);
     this->get_parameter("maxtime", maxTime);  // maxTime gets its value fro the parameter "maxtime"
+
+    this->declare_parameter("velfactor", 2.18);  // 1023/470 rpm no-load   
+    this->get_parameter("velfactor", velocityFactor);
     //rclcpp::Parameter int_param = this->get_parameter("maxtime");
     //maxTime = int_param.as_int();
 
@@ -224,9 +236,9 @@ void MotorWheelControl::dxlStopMotors(){
 
     checkErrors( groupSpeedSyncWrite.txPacket() );
     printf("Elapset time %0.3f\n",  this->get_clock()->now().seconds() - start );
-    std::this_thread::sleep_for(2s); // give time for wheels stop moving after stop command issued
-    //motors_status = OFF;    // or you can simple change the status to OFF by uncommenting this line and commenting both the above and below line
-    motors_status = areMotorsOn();
+    //std::this_thread::sleep_for(2s); // give time for wheels stop moving after stop command issued
+    motors_status = OFF;    // or you can simple change the status to OFF by uncommenting this line and commenting both the above and below line
+    //motors_status = areMotorsOn();
     
 
     // Clear syncwrite parameter storage
@@ -269,7 +281,7 @@ void MotorWheelControl::dxlStartMotors(){
     /* Motor 1 */  
 
     if(m1_rs >= 0){
-        s1 = m1_rs * 1024 + 1024;  // CW
+        s1 = m1_rs * velocityFactor + 1024;  // CW
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -279,7 +291,7 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s1 =  -m1_rs * 1024 + 0 ;  // CCW
+        s1 =  -m1_rs * velocityFactor + 0 ;  // CCW
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -291,7 +303,7 @@ void MotorWheelControl::dxlStartMotors(){
 
     /* Motor 2 */
     if(m2_rs >= 0){
-        s2 = m2_rs * 1024 + 1024;  // CW
+        s2 = m2_rs * velocityFactor + 1024;  // CW
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -301,7 +313,7 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s2 =  -m2_rs * 1024 + 0 ;  // CCW
+        s2 =  -m2_rs * velocityFactor + 0 ;  // CCW
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -313,7 +325,7 @@ void MotorWheelControl::dxlStartMotors(){
         
     /* Motor 3 */
     if(m3_rs >= 0){
-        s3 = m3_rs * 1024 + 1024;  // CW
+        s3 = m3_rs * velocityFactor + 1024;  // CW
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -323,7 +335,7 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s3 =  -m3_rs * 1024 + 0 ;  // CCW
+        s3 =  -m3_rs * velocityFactor + 0 ;  // CCW
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -486,8 +498,13 @@ MotorWheelControl::~MotorWheelControl(){
 void MotorWheelControl::elapsedTime_callback(){
     auto checkTime = this->get_clock()->now().seconds();
     auto timeElapsed = checkTime - start;
-
+    uint16_t s1{},s2{},s3{};
     if(timeElapsed >= maxTime){
+        /* Check the present speed of each wheel 0 - 1023*/
+        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_1,ADDR_PRESENT_SPEED, &s1, &dxl_error));
+        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_2,ADDR_PRESENT_SPEED, &s2, &dxl_error));
+        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_3,ADDR_PRESENT_SPEED, &s3, &dxl_error));
+        printf("speeds %d, %d, %d\n", s1%1024,s2%1024,s3%1024);
         dxlStopMotors();
         // motors_status = areMotorsOn();
     }

@@ -16,5 +16,17 @@
   "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include -I/home/ros2access/kaya_ws/install/dynamixel_sdk/include -isystem /opt/ros/foxy/install/include -isystem /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o -c /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/motorcontroller.cpp",
   "file": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/motorcontroller.cpp",
   "output": "CMakeFiles/motorcontroller.dir/src/motorcontroller.cpp.o"
+},
+{
+  "directory": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include -isystem /opt/ros/foxy/install/include -isystem /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include -isystem /usr/include/eigen3 -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/relativespeeds.dir/src/relativespeeds.cpp.o -c /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/relativespeeds.cpp",
+  "file": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/relativespeeds.cpp",
+  "output": "CMakeFiles/relativespeeds.dir/src/relativespeeds.cpp.o"
+},
+{
+  "directory": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/include -I/home/ros2access/kaya_ws/install/dynamixel_sdk/include -isystem /opt/ros/foxy/install/include -isystem /home/ros2access/kaya_ws/install/dynamixel_sdk_custom_interfaces/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/dynamixelcontroller.dir/src/dynamixelcontroller.cpp.o -c /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/dynamixelcontroller.cpp",
+  "file": "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/dynamixelcontroller.cpp",
+  "output": "CMakeFiles/dynamixelcontroller.dir/src/dynamixelcontroller.cpp.o"
 }
 ]

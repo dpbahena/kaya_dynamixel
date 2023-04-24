@@ -3,6 +3,8 @@
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/read_write_node.dir
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/my_read_write.dir
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/motorcontroller.dir
+/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/relativespeeds.dir
+/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/dynamixelcontroller.dir
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/test.dir
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/edit_cache.dir
 /home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/CMakeFiles/rebuild_cache.dir

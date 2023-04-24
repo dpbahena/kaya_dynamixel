@@ -236,6 +236,56 @@ motorcontroller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorcontroller.dir/build.make CMakeFiles/motorcontroller.dir/build
 .PHONY : motorcontroller/fast
 
+#=============================================================================
+# Target rules for targets named relativespeeds
+
+# Build rule for target.
+relativespeeds: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 relativespeeds
+.PHONY : relativespeeds
+
+# fast build rule for target.
+relativespeeds/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relativespeeds.dir/build.make CMakeFiles/relativespeeds.dir/build
+.PHONY : relativespeeds/fast
+
+#=============================================================================
+# Target rules for targets named dynamixelcontroller
+
+# Build rule for target.
+dynamixelcontroller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dynamixelcontroller
+.PHONY : dynamixelcontroller
+
+# fast build rule for target.
+dynamixelcontroller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixelcontroller.dir/build.make CMakeFiles/dynamixelcontroller.dir/build
+.PHONY : dynamixelcontroller/fast
+
+src/dynamixelcontroller.o: src/dynamixelcontroller.cpp.o
+.PHONY : src/dynamixelcontroller.o
+
+# target to build an object file
+src/dynamixelcontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixelcontroller.dir/build.make CMakeFiles/dynamixelcontroller.dir/src/dynamixelcontroller.cpp.o
+.PHONY : src/dynamixelcontroller.cpp.o
+
+src/dynamixelcontroller.i: src/dynamixelcontroller.cpp.i
+.PHONY : src/dynamixelcontroller.i
+
+# target to preprocess a source file
+src/dynamixelcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixelcontroller.dir/build.make CMakeFiles/dynamixelcontroller.dir/src/dynamixelcontroller.cpp.i
+.PHONY : src/dynamixelcontroller.cpp.i
+
+src/dynamixelcontroller.s: src/dynamixelcontroller.cpp.s
+.PHONY : src/dynamixelcontroller.s
+
+# target to generate assembly for a file
+src/dynamixelcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixelcontroller.dir/build.make CMakeFiles/dynamixelcontroller.dir/src/dynamixelcontroller.cpp.s
+.PHONY : src/dynamixelcontroller.cpp.s
+
 src/motorcontroller.o: src/motorcontroller.cpp.o
 .PHONY : src/motorcontroller.o
 
@@ -308,6 +358,30 @@ src/read_write_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
 .PHONY : src/read_write_node.cpp.s
 
+src/relativespeeds.o: src/relativespeeds.cpp.o
+.PHONY : src/relativespeeds.o
+
+# target to build an object file
+src/relativespeeds.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relativespeeds.dir/build.make CMakeFiles/relativespeeds.dir/src/relativespeeds.cpp.o
+.PHONY : src/relativespeeds.cpp.o
+
+src/relativespeeds.i: src/relativespeeds.cpp.i
+.PHONY : src/relativespeeds.i
+
+# target to preprocess a source file
+src/relativespeeds.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relativespeeds.dir/build.make CMakeFiles/relativespeeds.dir/src/relativespeeds.cpp.i
+.PHONY : src/relativespeeds.cpp.i
+
+src/relativespeeds.s: src/relativespeeds.cpp.s
+.PHONY : src/relativespeeds.s
+
+# target to generate assembly for a file
+src/relativespeeds.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/relativespeeds.dir/build.make CMakeFiles/relativespeeds.dir/src/relativespeeds.cpp.s
+.PHONY : src/relativespeeds.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -323,9 +397,14 @@ help:
 	@echo "... test"
 	@echo "... dynamixel_sdk_examples_uninstall"
 	@echo "... uninstall"
+	@echo "... dynamixelcontroller"
 	@echo "... motorcontroller"
 	@echo "... my_read_write"
 	@echo "... read_write_node"
+	@echo "... relativespeeds"
+	@echo "... src/dynamixelcontroller.o"
+	@echo "... src/dynamixelcontroller.i"
+	@echo "... src/dynamixelcontroller.s"
 	@echo "... src/motorcontroller.o"
 	@echo "... src/motorcontroller.i"
 	@echo "... src/motorcontroller.s"
@@ -335,6 +414,9 @@ help:
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"
+	@echo "... src/relativespeeds.o"
+	@echo "... src/relativespeeds.i"
+	@echo "... src/relativespeeds.s"
 .PHONY : help
 
 
