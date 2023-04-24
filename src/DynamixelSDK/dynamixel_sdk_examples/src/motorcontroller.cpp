@@ -19,7 +19,7 @@
 #define ADDR_GOAL_ACCELERATION  73
 #define ADDR_MOVING_STATUS      46
 #define ADDR_PRESENT_SPEED      38
-#define LEN_PRESENT_SPEED       2
+
 
 // Protocol version
 #define PROTOCOL_VERSION 1.0  // Default Protocol version of DYNAMIXEL AX & MX.
