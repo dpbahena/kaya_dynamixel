@@ -19,6 +19,7 @@
 #define ADDR_GOAL_ACCELERATION  73
 #define ADDR_MOVING_STATUS      46
 #define ADDR_PRESENT_SPEED      38
+#define ADDR_TORQUE_LIMIT       34
 
 
 // Protocol version
@@ -26,14 +27,14 @@
 // Default setting
 #define BAUDRATE 1000000  // Default Baudrate of DYNAMIXEL MX series is 57600
 #define DEVICE_NAME "/dev/ttyUSB0"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
-#define ACCELERATION  10
+#define ACCELERATION  50
 #define MOTOR_1     1
 #define MOTOR_2     2
 #define MOTOR_3     3
 #define ON          1
 #define OFF         0
 
-//const double velocityFactor = 1023/470;   // 470 rmp with no load
+
 
 /* USAGE EXAMPLE - to start motors once 
 *
@@ -41,9 +42,8 @@
 * 
 *  change parameter in command line (to change maxtime wheels running on last command)
 *  
-*  ros2 run dynamixel_sdk_examples motorcontroller --ros-args -p maxtime:=4
+*  ros2 run dynamixel_sdk_examples motorcontroller --ros-args -p maxtime:=4 -p accel:=5 -p torque:=512
 */
-
 
 using std::placeholders::_1;
 using namespace std::chrono_literals;
@@ -70,8 +70,23 @@ private:
      *          constant used to convert the calculated wheel velocities to the appropriate unit or scale expected by the Dynamixel motors.
      */
     float velocityFactor; 
+    /**
+     * @brief  Acceleration It can be used from 0~254(0xFE) and the unit is approximately 8.583 [° / sec2].
+     *          When it is set to 0, there is no control over acceleration and moves with the maximum acceleration of the motor.
+     *          When it is set to 254, it becomes 2,180 [° / sec2].
+     *          For example, the present speed of DYNAMIXEL is 0, and Goal Acceleration is 10.
+     *          The speed of DYNAMIXEL after 1 second will be 14.3 [RPM].
+    */
+    int8_t acceleration;
 
-    
+    /**
+     * @brief  It is the value of the maximum torque limit.
+     *         0 ~ 1,023(0x3FF) is available, and the unit is about 0.1%.
+     *         For example, if the value is 512, it is about 50%; that means only 50% of the maximum torque will be used.
+     *         When the power is turned on, Torque Limit(34) is reset to the value of Max Torque(14).
+    */
+    int16_t torqueLimit;
+
 
     float m1_rs, m2_rs, m3_rs;   //holds relative speeds for each motor
     float s1{},s2{},s3{}; // hold actual speeds
@@ -131,10 +146,13 @@ MotorWheelControl::MotorWheelControl() : Node("motorcontrollernode"){
     this->declare_parameter("maxtime", 3);
     this->get_parameter("maxtime", maxTime);  // maxTime gets its value fro the parameter "maxtime"
 
-    this->declare_parameter("velfactor", 2.18);  // 1023/470 rpm no-load   
-    this->get_parameter("velfactor", velocityFactor);
-    //rclcpp::Parameter int_param = this->get_parameter("maxtime");
-    //maxTime = int_param.as_int();
+   
+    this->declare_parameter("accel", 0);
+    this->get_parameter("accel", acceleration);  
+
+    this->declare_parameter("torque", 512);
+    this->get_parameter("torque", torqueLimit);
+  
 
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
@@ -281,7 +299,9 @@ void MotorWheelControl::dxlStartMotors(){
     /* Motor 1 */  
 
     if(m1_rs >= 0){
-        s1 = m1_rs * velocityFactor + 1024;  // CW
+        s1 = m1_rs + 1024;  // CW
+        if(s1 > 2047) s1 = 2047; // max value
+        //printf("CW %f\t", s1);
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -291,7 +311,9 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s1 =  -m1_rs * velocityFactor + 0 ;  // CCW
+        s1 =  -m1_rs + 0 ;  // CCW
+        if(s1 > 1023) s1 = 1023;  // max value
+        //printf("CCW %f\t", s1);
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -303,7 +325,9 @@ void MotorWheelControl::dxlStartMotors(){
 
     /* Motor 2 */
     if(m2_rs >= 0){
-        s2 = m2_rs * velocityFactor + 1024;  // CW
+        s2 = m2_rs + 1024;  // CW
+        if(s2 > 2047) s2 = 2047;
+        //printf("CW %f\t", s2);
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -313,7 +337,9 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s2 =  -m2_rs * velocityFactor + 0 ;  // CCW
+        s2 =  -m2_rs + 0 ;  // CCW
+        if(s2 > 1023) s2 = 1023;
+        //printf("CCW %f\t", s2);
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -325,7 +351,9 @@ void MotorWheelControl::dxlStartMotors(){
         
     /* Motor 3 */
     if(m3_rs >= 0){
-        s3 = m3_rs * velocityFactor + 1024;  // CW
+        s3 = m3_rs + 1024;  // CW
+        if(s3 > 2047) s3 = 2047;
+        //printf("CW %f\n", s3);
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -335,7 +363,9 @@ void MotorWheelControl::dxlStartMotors(){
         }
 
     }else{
-        s3 =  -m3_rs * velocityFactor + 0 ;  // CCW
+        s3 =  -m3_rs + 0 ;  // CCW
+        if(s3 > 1023) s3 = 1023;
+        //printf("CCW %f\n", s3);
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -471,13 +501,17 @@ void MotorWheelControl::setDxl(uint8_t id){
     checkErrors(packetHandler->write2ByteTxRx(portHandler, id, ADDR_CCW_ANGLE_LIMIT, (uint16_t) 0, &dxl_error));  // 0 : no limit
     /* Enable torque */
     checkErrors(packetHandler->write1ByteTxRx(portHandler, id, ADDR_TORQUE_ENABLE, 1, &dxl_error));
+
+    /* Limit max-torque */
+    checkErrors(packetHandler->write2ByteTxRx(portHandler, id, ADDR_TORQUE_LIMIT, torqueLimit, &dxl_error));
+    
     
 }
 
 void MotorWheelControl::dxlSetAcceleration(uint8_t id){
 
     /* Set acceleration */
-    checkErrors(packetHandler->write1ByteTxRx(portHandler, id, ADDR_GOAL_ACCELERATION, (uint8_t)ACCELERATION, &dxl_error));
+    checkErrors(packetHandler->write1ByteTxRx(portHandler, id, ADDR_GOAL_ACCELERATION, (int8_t)acceleration, &dxl_error));
 
 }
 
@@ -501,10 +535,13 @@ void MotorWheelControl::elapsedTime_callback(){
     uint16_t s1{},s2{},s3{};
     if(timeElapsed >= maxTime){
         /* Check the present speed of each wheel 0 - 1023*/
-        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_1,ADDR_PRESENT_SPEED, &s1, &dxl_error));
-        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_2,ADDR_PRESENT_SPEED, &s2, &dxl_error));
         checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_3,ADDR_PRESENT_SPEED, &s3, &dxl_error));
+        
+        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_2,ADDR_PRESENT_SPEED, &s2, &dxl_error));
+        checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_1,ADDR_PRESENT_SPEED, &s1, &dxl_error));
         printf("speeds %d, %d, %d\n", s1%1024,s2%1024,s3%1024);
+        printf("RPM %f %f, %f\n", (s1%1024)*0.916,(s2%1024)*0.916,(s3%1024)*0.916);
+
         dxlStopMotors();
         // motors_status = areMotorsOn();
     }
