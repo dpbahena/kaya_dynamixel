@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "read_write_node" "my_read_write" "motorcontroller" "relativespeeds" "dynamixelcontroller" "DESTINATION" "lib/dynamixel_sdk_examples")
 include("/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
+# install(DIRECTORY "launch" "DESTINATION" "share/dynamixel_sdk_examples")
+ament_cmake_symlink_install_directory("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples" DIRECTORY "launch" "DESTINATION" "share/dynamixel_sdk_examples")
+
 # install(FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples" FILES "/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

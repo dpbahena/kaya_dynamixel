@@ -39,6 +39,7 @@
 /* USAGE EXAMPLE - to start motors once 
 *
 *  ros2 topic pub -1 /relative_speeds dynamixel_sdk_custom_interfaces/msg/SetRelativeSpeed "{m1: -0.5, m2: 0.4, m3: .5}"  
+*  ros2 topic pub -t 3 /cmd_vel geometry_msgs/msg/Twist "{linear: {x: -0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}"
 * 
 *  change parameter in command line (to change maxtime wheels running on last command)
 *  
@@ -253,7 +254,7 @@ void MotorWheelControl::dxlStopMotors(){
      /* Syncwrite moving (stop) speed */
 
     checkErrors( groupSpeedSyncWrite.txPacket() );
-    printf("Elapset time %0.3f\n",  this->get_clock()->now().seconds() - start );
+    RCLCPP_INFO(this->get_logger(),"Elapset time %0.3f\n",  this->get_clock()->now().seconds() - start );
     //std::this_thread::sleep_for(2s); // give time for wheels stop moving after stop command issued
     motors_status = OFF;    // or you can simple change the status to OFF by uncommenting this line and commenting both the above and below line
     //motors_status = areMotorsOn();
@@ -301,7 +302,7 @@ void MotorWheelControl::dxlStartMotors(){
     if(m1_rs >= 0){
         s1 = m1_rs + 1024;  // CW
         if(s1 > 2047) s1 = 2047; // max value
-        //printf("CW %f\t", s1);
+        //RCLCPP_INFO(this->get_logger(),"CW %f\t", s1);
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -313,7 +314,7 @@ void MotorWheelControl::dxlStartMotors(){
     }else{
         s1 =  -m1_rs + 0 ;  // CCW
         if(s1 > 1023) s1 = 1023;  // max value
-        //printf("CCW %f\t", s1);
+        //RCLCPP_INFO(this->get_logger(),"CCW %f\t", s1);
         param_speed_value[0] = DXL_LOBYTE(s1);
         param_speed_value[1] = DXL_HIBYTE(s1);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_1, param_speed_value);
@@ -327,7 +328,7 @@ void MotorWheelControl::dxlStartMotors(){
     if(m2_rs >= 0){
         s2 = m2_rs + 1024;  // CW
         if(s2 > 2047) s2 = 2047;
-        //printf("CW %f\t", s2);
+        //RCLCPP_INFO(this->get_logger(),"CW %f\t", s2);
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -339,7 +340,7 @@ void MotorWheelControl::dxlStartMotors(){
     }else{
         s2 =  -m2_rs + 0 ;  // CCW
         if(s2 > 1023) s2 = 1023;
-        //printf("CCW %f\t", s2);
+        //RCLCPP_INFO(this->get_logger(),"CCW %f\t", s2);
         param_speed_value[0] = DXL_LOBYTE(s2);
         param_speed_value[1] = DXL_HIBYTE(s2);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_2, param_speed_value);
@@ -353,7 +354,7 @@ void MotorWheelControl::dxlStartMotors(){
     if(m3_rs >= 0){
         s3 = m3_rs + 1024;  // CW
         if(s3 > 2047) s3 = 2047;
-        //printf("CW %f\n", s3);
+        //RCLCPP_INFO(this->get_logger(),"CW %f\n", s3);
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -365,7 +366,7 @@ void MotorWheelControl::dxlStartMotors(){
     }else{
         s3 =  -m3_rs + 0 ;  // CCW
         if(s3 > 1023) s3 = 1023;
-        //printf("CCW %f\n", s3);
+        //RCLCPP_INFO(this->get_logger(),"CCW %f\n", s3);
         param_speed_value[0] = DXL_LOBYTE(s3);
         param_speed_value[1] = DXL_HIBYTE(s3);
         dxl_addparam_result = groupSpeedSyncWrite.addParam(MOTOR_3, param_speed_value);
@@ -388,31 +389,7 @@ void MotorWheelControl::dxlStartMotors(){
 
     motors_status = areMotorsOn();  // check if motors are actually on
 
-
-    /* No group synchronization */
-    // if(m1_rs>= 0){
-    // 	s1 = m1_rs * 1024 + 1024;
-    //     dxlSetSpeed(MOTOR_1, s1);  // CW
-    // }else{
-    //     s1 =  -m1_rs * 1024 + 0 ;  // CCW
-    // 	dxlSetSpeed(MOTOR_1, s1);
-    // }
-    // if(m2_rs >= 0){
-    //     s2 = m2_rs * 1024 + 1024;  // CW
-    // 	dxlSetSpeed(MOTOR_2, s2);
-    // }else{
-    //     s2 = -m2_rs * 1024 + 0;   // CCW
-    // 	dxlSetSpeed(MOTOR_2, s2);
-    // }
-    // if(m3_rs>= 0){
-    //     s3 = m3_rs * 1024 + 1024;  // CW
-    // 	dxlSetSpeed(MOTOR_3, s3);
-    // }else{
-    //     s3 = -m3_rs * 1024 + 0;   // CCW
-    // 	dxlSetSpeed(MOTOR_3, s3);
-    // }
-
-    
+     
 }
 
 /**
@@ -539,8 +516,8 @@ void MotorWheelControl::elapsedTime_callback(){
         
         checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_2,ADDR_PRESENT_SPEED, &s2, &dxl_error));
         checkErrors(packetHandler->read2ByteTxRx(portHandler, MOTOR_1,ADDR_PRESENT_SPEED, &s1, &dxl_error));
-        printf("speeds %d, %d, %d\n", s1%1024,s2%1024,s3%1024);
-        printf("RPM %f %f, %f\n", (s1%1024)*0.916,(s2%1024)*0.916,(s3%1024)*0.916);
+        RCLCPP_INFO(this->get_logger(),"speeds %d, %d, %d\n", s1%1024,s2%1024,s3%1024);
+        RCLCPP_INFO(this->get_logger(),"RPM %f %f, %f\n", (s1%1024)*0.916,(s2%1024)*0.916,(s3%1024)*0.916);
 
         dxlStopMotors();
         // motors_status = areMotorsOn();

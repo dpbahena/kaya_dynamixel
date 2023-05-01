@@ -3,6 +3,9 @@
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/motorcontroller
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/relativespeeds
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/dynamixelcontroller
+/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/launch/car_robot.launch.py
+/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/launch/dynamixelcontroller.launch.py
+/home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/launch/motorcontroller.launch.py
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples
 /home/ros2access/kaya_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh

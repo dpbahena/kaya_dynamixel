@@ -143,6 +143,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_examples" TYPE DIRECTORY FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/launch")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ros2access/kaya_ws/src/DynamixelSDK/dynamixel_sdk_examples/build/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples")
 endif()
 
