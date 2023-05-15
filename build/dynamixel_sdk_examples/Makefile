@@ -262,6 +262,91 @@ dynamixelcontroller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dynamixelcontroller.dir/build.make CMakeFiles/dynamixelcontroller.dir/build
 .PHONY : dynamixelcontroller/fast
 
+#=============================================================================
+# Target rules for targets named bmi160
+
+# Build rule for target.
+bmi160: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bmi160
+.PHONY : bmi160
+
+# fast build rule for target.
+bmi160/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/build
+.PHONY : bmi160/fast
+
+lib/DFRobot_BMI160.o: lib/DFRobot_BMI160.cpp.o
+.PHONY : lib/DFRobot_BMI160.o
+
+# target to build an object file
+lib/DFRobot_BMI160.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/DFRobot_BMI160.cpp.o
+.PHONY : lib/DFRobot_BMI160.cpp.o
+
+lib/DFRobot_BMI160.i: lib/DFRobot_BMI160.cpp.i
+.PHONY : lib/DFRobot_BMI160.i
+
+# target to preprocess a source file
+lib/DFRobot_BMI160.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/DFRobot_BMI160.cpp.i
+.PHONY : lib/DFRobot_BMI160.cpp.i
+
+lib/DFRobot_BMI160.s: lib/DFRobot_BMI160.cpp.s
+.PHONY : lib/DFRobot_BMI160.s
+
+# target to generate assembly for a file
+lib/DFRobot_BMI160.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/DFRobot_BMI160.cpp.s
+.PHONY : lib/DFRobot_BMI160.cpp.s
+
+lib/i2c_driver/i2c_driver.o: lib/i2c_driver/i2c_driver.cpp.o
+.PHONY : lib/i2c_driver/i2c_driver.o
+
+# target to build an object file
+lib/i2c_driver/i2c_driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/i2c_driver/i2c_driver.cpp.o
+.PHONY : lib/i2c_driver/i2c_driver.cpp.o
+
+lib/i2c_driver/i2c_driver.i: lib/i2c_driver/i2c_driver.cpp.i
+.PHONY : lib/i2c_driver/i2c_driver.i
+
+# target to preprocess a source file
+lib/i2c_driver/i2c_driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/i2c_driver/i2c_driver.cpp.i
+.PHONY : lib/i2c_driver/i2c_driver.cpp.i
+
+lib/i2c_driver/i2c_driver.s: lib/i2c_driver/i2c_driver.cpp.s
+.PHONY : lib/i2c_driver/i2c_driver.s
+
+# target to generate assembly for a file
+lib/i2c_driver/i2c_driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/lib/i2c_driver/i2c_driver.cpp.s
+.PHONY : lib/i2c_driver/i2c_driver.cpp.s
+
+src/bmi160.o: src/bmi160.cpp.o
+.PHONY : src/bmi160.o
+
+# target to build an object file
+src/bmi160.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/src/bmi160.cpp.o
+.PHONY : src/bmi160.cpp.o
+
+src/bmi160.i: src/bmi160.cpp.i
+.PHONY : src/bmi160.i
+
+# target to preprocess a source file
+src/bmi160.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/src/bmi160.cpp.i
+.PHONY : src/bmi160.cpp.i
+
+src/bmi160.s: src/bmi160.cpp.s
+.PHONY : src/bmi160.s
+
+# target to generate assembly for a file
+src/bmi160.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmi160.dir/build.make CMakeFiles/bmi160.dir/src/bmi160.cpp.s
+.PHONY : src/bmi160.cpp.s
+
 src/dynamixelcontroller.o: src/dynamixelcontroller.cpp.o
 .PHONY : src/dynamixelcontroller.o
 
@@ -397,11 +482,21 @@ help:
 	@echo "... test"
 	@echo "... dynamixel_sdk_examples_uninstall"
 	@echo "... uninstall"
+	@echo "... bmi160"
 	@echo "... dynamixelcontroller"
 	@echo "... motorcontroller"
 	@echo "... my_read_write"
 	@echo "... read_write_node"
 	@echo "... relativespeeds"
+	@echo "... lib/DFRobot_BMI160.o"
+	@echo "... lib/DFRobot_BMI160.i"
+	@echo "... lib/DFRobot_BMI160.s"
+	@echo "... lib/i2c_driver/i2c_driver.o"
+	@echo "... lib/i2c_driver/i2c_driver.i"
+	@echo "... lib/i2c_driver/i2c_driver.s"
+	@echo "... src/bmi160.o"
+	@echo "... src/bmi160.i"
+	@echo "... src/bmi160.s"
 	@echo "... src/dynamixelcontroller.o"
 	@echo "... src/dynamixelcontroller.i"
 	@echo "... src/dynamixelcontroller.s"

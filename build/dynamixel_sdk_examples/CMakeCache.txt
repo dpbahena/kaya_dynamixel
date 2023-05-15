@@ -281,7 +281,7 @@ SITE:STRING=dario-nano
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/foxy/install/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/opt/ros/foxy/install/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/foxy/install/share/ament_cmake/cmake
@@ -381,6 +381,9 @@ ament_uncrustify_BIN:FILEPATH=/opt/ros/foxy/install/bin/ament_uncrustify
 
 //Path to a program.
 ament_xmllint_BIN:FILEPATH=/opt/ros/foxy/install/bin/ament_xmllint
+
+//The directory containing a CMake configuration file for arduino.
+arduino_DIR:PATH=arduino_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/foxy/install/share/builtin_interfaces/cmake
@@ -501,6 +504,9 @@ rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/foxy/install/share/rosidl_t
 
 //The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
 rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/foxy/install/share/rosidl_typesupport_introspection_cpp/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/foxy/install/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/opt/ros/foxy/install/lib/cmake/spdlog

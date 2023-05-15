@@ -17,6 +17,8 @@ endif()
 
 set(dynamixel /home/ros2access/kaya_ws/install)
 set(custom_interfaces /home/ros2access/kaya_ws/install())
+
+
 # Find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(dynamixel_sdk REQUIRED PATHS ${dynamixel})
@@ -24,9 +26,10 @@ find_package(dynamixel_sdk_custom_interfaces REQUIRED PATHS ${custom_interfaces}
 find_package(rclcpp REQUIRED)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 include_directories(include)
-
+include_directories(lib)
 
 # Build
 add_executable(read_write_node src/read_write_node.cpp)
@@ -35,6 +38,7 @@ ament_target_dependencies(read_write_node
   dynamixel_sdk
   rclcpp 
 )
+
 
 add_executable(my_read_write src/my_read_write.cpp)
 ament_target_dependencies(my_read_write dynamixel_sdk dynamixel_sdk_custom_interfaces rclcpp)
@@ -49,6 +53,9 @@ ament_target_dependencies(relativespeeds rclcpp dynamixel_sdk_custom_interfaces 
 add_executable(dynamixelcontroller src/dynamixelcontroller.cpp)
 ament_target_dependencies(dynamixelcontroller rclcpp dynamixel_sdk geometry_msgs dynamixel_sdk_custom_interfaces)
 
+add_executable(bmi160 src/bmi160.cpp lib/DFRobot_BMI160.cpp lib/i2c_driver/i2c_driver.cpp)
+ament_target_dependencies(bmi160 rclcpp sensor_msgs)
+
 # Install
 install(TARGETS
   read_write_node
@@ -56,8 +63,10 @@ install(TARGETS
   motorcontroller
   relativespeeds
   dynamixelcontroller
+  bmi160
   DESTINATION lib/${PROJECT_NAME}
 )
+
 
 
 install(DIRECTORY

@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "read_write_node" "my_read_write" "motorcontroller" "relativespeeds" "dynamixelcontroller" "DESTINATION" "lib/dynamixel_sdk_examples")
+# install("TARGETS" "read_write_node" "my_read_write" "motorcontroller" "relativespeeds" "dynamixelcontroller" "bmi160" "DESTINATION" "lib/dynamixel_sdk_examples")
 include("/home/ros2access/kaya_ws/build/dynamixel_sdk_examples/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/dynamixel_sdk_examples")
