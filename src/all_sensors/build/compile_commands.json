@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/ros2access/kaya_ws/src/all_sensors/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/all_sensors/libraries -isystem /opt/ros/foxy/install/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/bmi160.dir/src/bmi160.cpp.o -c /home/ros2access/kaya_ws/src/all_sensors/src/bmi160.cpp",
+  "file": "/home/ros2access/kaya_ws/src/all_sensors/src/bmi160.cpp",
+  "output": "CMakeFiles/bmi160.dir/src/bmi160.cpp.o"
+},
+{
+  "directory": "/home/ros2access/kaya_ws/src/all_sensors/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/all_sensors/libraries -isystem /opt/ros/foxy/install/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/bmi160.dir/libraries/i2c_driver/i2c_driver.cpp.o -c /home/ros2access/kaya_ws/src/all_sensors/libraries/i2c_driver/i2c_driver.cpp",
+  "file": "/home/ros2access/kaya_ws/src/all_sensors/libraries/i2c_driver/i2c_driver.cpp",
+  "output": "CMakeFiles/bmi160.dir/libraries/i2c_driver/i2c_driver.cpp.o"
+},
+{
+  "directory": "/home/ros2access/kaya_ws/src/all_sensors/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -I/home/ros2access/kaya_ws/src/all_sensors/libraries -isystem /opt/ros/foxy/install/include -g -std=gnu++14 -Wall -Wextra -Wpedantic -o CMakeFiles/bmi160.dir/libraries/bmi160/bmi160-i2c.cpp.o -c /home/ros2access/kaya_ws/src/all_sensors/libraries/bmi160/bmi160-i2c.cpp",
+  "file": "/home/ros2access/kaya_ws/src/all_sensors/libraries/bmi160/bmi160-i2c.cpp",
+  "output": "CMakeFiles/bmi160.dir/libraries/bmi160/bmi160-i2c.cpp.o"
+}
+]

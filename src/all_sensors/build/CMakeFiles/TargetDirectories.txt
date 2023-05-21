@@ -1,0 +1,10 @@
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/uninstall.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/all_sensors_uninstall.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/bmi160.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/test.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/edit_cache.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/rebuild_cache.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/list_install_components.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/install.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/install/local.dir
+/home/ros2access/kaya_ws/src/all_sensors/build/CMakeFiles/install/strip.dir

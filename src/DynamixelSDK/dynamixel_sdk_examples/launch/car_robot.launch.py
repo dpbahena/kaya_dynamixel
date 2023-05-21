@@ -13,7 +13,7 @@ from launch.substitutions import TextSubstitution
 #
 #  ros2 launch dynamixel_sdk_examples car_robot.launch.py  maxtime:=1 accel:=1023 torque:=1023
 #
-#  testing with joystick  
+#  testing with joystick / from a different computer in same network 
 #
 #  ros2 launch teleop_twist_joy teleop-launch.py config_filepath:="/home/dario/foxy_ws/config/xbox.yaml"  
 #
@@ -43,10 +43,19 @@ def generate_launch_description():
         )
     )
 
-    
+    # ! -------- bmi160 ---------------->
+    launch_bmi160 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('dynamixel_sdk_examples'),
+                'launch/bmi160.launch.py'
+            )
+        )
+    )
 
     ld.add_action(launch_motor_controller) 
     ld.add_action(launch_relative_speeds)
+    ld.add_action(launch_bmi160)
  
     
    

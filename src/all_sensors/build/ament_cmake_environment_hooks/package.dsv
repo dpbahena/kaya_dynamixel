@@ -1,0 +1,4 @@
+source;share/all_sensors/local_setup.bash
+source;share/all_sensors/local_setup.dsv
+source;share/all_sensors/local_setup.sh
+source;share/all_sensors/local_setup.zsh
