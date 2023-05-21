@@ -65,11 +65,11 @@ public:
     AccelGyro() : Node("accegyro_node"){
         bmi160 = new Bmi160_I2C(BMI160_I2C_ADDR);
         //filter1 = new MovingAverage(15);
-        kfilter1 = new KalmanFilter(0.003,0.2,1.0,3.0);
+        kfilter1 = new KalmanFilter(0.003,0.2,1.0,2.0);
         //filter2 = new MovingAverage(10);
         kfilter2 = new KalmanFilter(0.003,0.2,1.0,2.0);
         //filter3 = new MovingAverage(10);
-        kfilter3 = new KalmanFilter(0.003,0.2,1.0,2.0);
+        kfilter3 = new KalmanFilter(0.003,0.2,1.0,4.0);
         
         bmi160->autoCalibrateGyroOffset();
         imuPub_ = this->create_publisher<sensor_msgs::msg::Imu>("imu",10);
@@ -78,7 +78,7 @@ public:
     }
     ~AccelGyro(){
 
-        delete bmi160;
+        //delete bmi160;
         delete kfilter1;
         delete kfilter2;
         delete kfilter3;
