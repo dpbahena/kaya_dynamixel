@@ -13,8 +13,8 @@ class KalmanFilter {
 private:
     double q; // process noise covariance
     double r; // measurement noise covariance
-    double x; // estimated value
     double p; // estimation error covariance
+    double x; // estimated value
     double k; // kalman gain
 
 public:
